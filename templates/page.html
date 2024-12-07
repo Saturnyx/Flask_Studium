@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" style="background: black">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{{ title }}</title>
+    <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='main.css') }}"
+    />
+    <link
+            rel="icon"
+            href="{{ url_for('static', filename='static/images/Icon-Dark[Alone].avif') }}"
+            type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="content">
+    <h2>{{ title }}</h2>
+
+
+    <div class="horizontal-space-10"></div>
+    {{ content|safe }}
+    <div class="horizontal-space-10"></div>
+</div>
+<div class="footer">
+    <div class="row" style="padding-left: 1vw; padding-right: 1vw">
+        <div class="column">
+            <b>Getting Started:</b><br/>
+            <button onclick="window.location.href='/'">Home</button>
+            <br/>
+            <button onclick="window.location.href='/guide'">Guide</button>
+            <br/>
+            <button onclick="window.location.href='/search'">Search</button>
+            <br/>
+            <button onclick="window.location.href='/help'">Help</button>
+            <br/>
+            <button onclick="window.location.href='/about_studium'">
+                About Studium
+            </button>
+        </div>
+        <div class="column">
+            <b>Topics:</b><br/>
+            <button onclick="window.location.href='/chemistry/chemistry'">
+                Chemistry
+            </button>
+            <br/>
+            <button onclick="window.location.href='/physics/physics'">Physics</button>
+            <br/>
+            <button>Biology</button>
+            <br/>
+            <button>Mathematics</button>
+            <br/>
+            <button>Computer Science</button>
+            <br/>
+        </div>
+        <div class="column">
+            <b>Helping Out:</b><br/>
+            <button>Contribute</button>
+            <br/>
+            <button onclick="window.location.href='/about_studium'">
+                About Studium
+            </button>
+            <br/>
+            <button>About Us</button>
+            <br/>
+            <button>Contact Us</button>
+            <br/>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <p
+            style="
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 10px;
+        margin: 0;
+        line-height: normal;
+        font-family:
+          Space Mono,
+          monospace;
+        color: hsl(0, 0%, 100%);
+      "
+    >
+        &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }} 2024
+    </p>
+</div>
+</body>
+</html>

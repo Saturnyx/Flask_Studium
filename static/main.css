@@ -1,0 +1,240 @@
+body {
+    background-color: hsl(0, 0%, 100%);
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 20px 20px 0 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+}
+
+h1 {
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding-top: 35vh;
+    font-size: calc(50px + 5vw);
+    font-family: Fractul Alt, sans-serif;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    -webkit-text-stroke: 2px hsl(0, 0%, 100%);
+    text-shadow: 0 0 hsl(0, 0%, 100%);
+    transition: text-shadow 0.3s ease-in-out,
+    -webkit-text-fill-color 0.3s ease-in-out;
+}
+
+h1:active {
+    text-shadow: 5px 5px hsl(0, 0%, 100%);
+}
+
+h2 {
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding-top: 20vh;
+    font-size: calc(20px + 5vw);
+    font-family: Fractul Alt, sans-serif;
+    -webkit-text-fill-color: hsl(0, 0%, 100%);
+    -webkit-text-stroke: 2px hsl(0, 0%, 0%);
+    text-shadow: 5px 5px hsl(0, 0%, 0%);
+}
+
+h3 {
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding-top: 1vh;
+    font-size: calc(15px + 1vw);
+    font-family: "Space Mono", sans-serif;
+}
+
+p {
+    font-size: 20px;
+    font-family: "Book Antiqua", sans-serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 10px;
+    line-height: 26px;
+}
+
+button {
+    font-family: "Space Mono", monospace;
+    font-size: calc(0.7vw + 7px);
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    padding: 5px 12px 5px 12px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 1);
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+    border: 0;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+button:hover {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    color: rgb(0, 110, 110);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+sup {
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+}
+
+.content {
+    left: 0;
+    right: 0;
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+
+.search {
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    border-radius: 30px;
+    border: 2px solid hsl(0, 0%, 0%);
+    margin: 5px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    padding: 5px 5px 5px 20px;
+
+}
+
+.mono {
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    color: hsl(0, 0%, 0%);
+    padding-left: 0;
+}
+
+/*noinspection ALL*/
+
+.search_result {
+    font-family: "Space Mono", monospace;
+    font-size: 20px;
+    color: hsl(0, 0%, 0%);
+    padding-left: 0;
+}
+
+.version-class {
+    position: absolute;
+    margin: 0;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 100%;
+    top: calc(100vh - 30px);
+    font-family: "Space Mono", monospace;
+    color: hsl(0, 0%, 100%);
+}
+
+.background {
+    background-color: hsl(0, 0%, 0%);
+    padding: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    top: 0;
+}
+
+.horizontal-space {
+    height: 1vh;
+}
+
+.horizontal-space-10 {
+    height: 10vh;
+}
+
+.box {
+    outline: black solid 3px;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px rgb(0, 0, 0);
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    margin-bottom: 40px;
+    transition: box-shadow 0.3s ease-in-out, margin-left 0.3s ease-in-out,
+    margin-right 0.3s ease-in-out, padding-left 0.3s ease-in-out,
+    padding-right 0.3s ease-in-out;
+}
+
+.box:hover {
+    box-shadow: 15px 15px rgb(0, 0, 0);
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    border-radius: 20px 20px 0 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    padding: 50px 10px 10px 50px;
+    position: relative;
+    display: block;
+}
+
+.copyright {
+    bottom: 0;
+    right: 0;
+    border-top: 10px;
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;
+    border-radius: 10px 0 0 0;
+    position: fixed;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 110, 110, 0.7);
+}
+
+::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::selection {
+    color: hsl(0, 0%, 100%);
+    background: rgba(0, 110, 110, 0.7);
+    height: 20%;
+}
