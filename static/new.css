@@ -18,7 +18,7 @@ h1 {
     padding-top: 35vh;
     font-size: calc(50px + 6vw);
     font-family: Fractul Alt, sans-serif;
-    -webkit-text-fill-color: rgb(0, 0, 0);
+    -webkit-text-fill-color: hsl(180, 100%, 5%);
     -webkit-text-stroke: 2px hsl(0, 0%, 100%);
     text-shadow: 0 0 hsl(0, 0%, 100%);
     transition: text-shadow 0.3s ease-in-out,
@@ -38,8 +38,8 @@ h2 {
     font-size: calc(20px + 5vw);
     font-family: Fractul Alt, sans-serif;
     -webkit-text-fill-color: hsl(0, 0%, 100%);
-    -webkit-text-stroke: 2px hsl(0, 0%, 0%);
-    text-shadow: 5px 5px hsl(0, 0%, 0%);
+    -webkit-text-stroke: 2px hsl(180, 100%, 5%);
+    text-shadow: 5px 5px hsl(180, 100%, 5%);
 }
 
 h3 {
@@ -62,7 +62,7 @@ h4 {
 p {
     font-size: 20px;
     font-family: Garamond, serif;
-    color: rgb(0, 0, 0);
+    color: hsl(180, 100%, 5%);
     margin-bottom: 5px;
     padding-left: 0;
     padding-right: 0;
@@ -78,8 +78,8 @@ button {
     color: hsl(0, 0%, 100%);
     padding: 5px 12px 5px 12px;
     border-radius: 10px;
-    border: 2px solid hsl(0, 0%, 0%);
-    background-color: rgba(0, 0, 0, 1);
+    border: 2px solid hsl(180, 100%, 5%);
+    background-color: hsl(180, 100%, 5%);
     display: inline-block;
     margin: 5px 5px 5px 5px;
     transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
@@ -88,13 +88,13 @@ button {
 
 button:hover {
     text-decoration: none;
-    color: hsl(0, 0%, 0%);
+    color: hsl(180, 100%, 5%);
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 3px 3px 0 hsl(0, 0%, 0%);
+    box-shadow: 5px 5px 0 hsl(180, 100%, 5%);
 }
 
 a {
-    color: rgb(0, 110, 110);
+    color: hsl(180, 100%, 20%);
     text-decoration: none;
     font-weight: normal;
 }
@@ -119,7 +119,7 @@ sup {
     font-family: "Space Mono", monospace;
     font-size: 15px;
     border-radius: 30px;
-    border: 2px solid hsl(0, 0%, 0%);
+    border: 2px solid hsl(180, 100%, 5%);
     margin: 5px;
     left: 0;
     right: 0;
@@ -132,7 +132,7 @@ sup {
 .mono {
     font-family: "Space Mono", monospace;
     font-size: 18px;
-    color: hsl(0, 0%, 0%);
+    color: hsl(180, 100%, 5%);
     padding-left: 0;
 }
 
@@ -141,7 +141,7 @@ sup {
 .search_result {
     font-family: "Space Mono", monospace;
     font-size: 20px;
-    color: hsl(0, 0%, 0%);
+    color: hsl(180, 100%, 5%);
     padding-left: 0;
 }
 
@@ -157,7 +157,7 @@ sup {
 }
 
 .background {
-    background-color: hsl(0, 0%, 0%);
+    background-color: hsl(180, 100%, 5%);
     padding: 0;
     margin: 0;
     left: 0;
@@ -175,11 +175,11 @@ sup {
 }
 
 .box {
-    outline: black solid 3px;
+    outline: hsl(180, 100%, 5%) solid 3px;
     position: relative;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 10px 10px rgb(0, 0, 0);
+    box-shadow: 10px 10px hsl(180, 100%, 5%);
     font-family: 'Space Mono', monospace;
     font-size: 15px;
     margin-bottom: 40px;
@@ -190,7 +190,7 @@ sup {
 }
 
 .box:hover {
-    box-shadow: 15px 15px rgb(0, 0, 0);
+    box-shadow: 15px 15px hsl(180, 100%, 5%);
 }
 
 .column {
@@ -211,7 +211,7 @@ sup {
     left: 0;
     right: 0;
     height: auto;
-    background-color: hsl(0, 0%, 0%);
+    background-color: hsl(180, 100%, 5%);
     color: hsl(0, 0%, 100%);
     font-family: 'Space Mono', monospace;
     font-size: 15px;
@@ -232,7 +232,7 @@ sup {
     position: fixed;
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
-    background-color: rgba(0, 110, 110, 0.7);
+    background-color: hsla(180, 100%, 5%, 0.7);
 }
 
 ::-webkit-scrollbar {
@@ -243,6 +243,6 @@ sup {
 
 ::selection {
     color: hsl(0, 0%, 100%);
-    background: rgba(0, 110, 110, 0.7);
+    background: hsla(180, 100%, 20%, 0.7);
     height: 20%;
 }
