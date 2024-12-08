@@ -1,57 +1,57 @@
 <!doctype html>
 <html lang="en" style="background: black">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Search</title>
     <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='main.css') }}"
+            rel="stylesheet"
+            href="{{ url_for('static', filename='new.css') }}"
     />
     <link
-      rel="icon"
-      href="{{ url_for('static', filename='static/images/Icon-Dark[Alone].avif') }}"
-      type="image/x-icon"
+            rel="icon"
+            href="{{ url_for('static', filename='static/images/Icon-Dark[Alone].avif') }}"
+            type="image/x-icon"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <h2><label for="search">Search</label></h2>
-    <div class="horizontal-space-10"></div>
-    <div class="content">
-      <form method="post">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<h2><label for="search">Search</label></h2>
+<div class="horizontal-space-10"></div>
+<div class="content">
+    <form method="post">
         <input
-          type="text"
-          id="search"
-          name="search_query"
-          placeholder="SEARCH..."
-          class="search"
+                type="text"
+                id="search"
+                name="search_query"
+                placeholder="SEARCH..."
+                class="search"
         />
-      </form>
-      <div style="text-align: center">
+    </form>
+    <div style="text-align: center">
         <button onclick="window.location.href='/'">Home</button>
         <button onclick="window.location.href='/chemistry/chemistry'">
-          Chemistry
+            Chemistry
         </button>
         <button>Physics</button>
         <button>Biology</button>
         <button>Mathematics</button>
         <button>Computer Science</button>
         <button>Contribute</button>
-      </div>
-      <div class="horizontal-space-10"></div>
-
-      {{ content|safe }}
-
-      <div class="horizontal-space-10"></div>
-      <div class="horizontal-space-10"></div>
-      <div class="horizontal-space-10"></div>
-      <div class="horizontal-space-10"></div>
-      <div class="horizontal-space-10"></div>
     </div>
-  </body>
-  <div class="copyright">
+    <div class="horizontal-space-10"></div>
+
+    {{ content|safe }}
+
+    <div class="horizontal-space-10"></div>
+    <div class="horizontal-space-10"></div>
+    <div class="horizontal-space-10"></div>
+    <div class="horizontal-space-10"></div>
+    <div class="horizontal-space-10"></div>
+</div>
+</body>
+<div class="copyright">
     <p
-      style="
+            style="
         font-size: 12px;
         padding-left: 5px;
         padding-right: 10px;
@@ -63,8 +63,7 @@
         color: hsl(0, 0%, 100%);
       "
     >
-      &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright
-      }} 2024
+        &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }} 2024
     </p>
-  </div>
+</div>
 </html>

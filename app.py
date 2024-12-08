@@ -1,9 +1,9 @@
 import os
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from markupsafe import Markup
 
-version = "10.0.1"
+version = "10.5"
 
 app = Flask(__name__)
 
@@ -80,6 +80,11 @@ def chemistry():
     path = "chemistry/chemistry.html"
     return render(title, author, path)
 
+
+@app.route("/chemistry/")
+def chem():
+    return redirect("/chemistry/chemistry")
+
 # PHYSICAL CHEMISTRY
 @app.route("/chemistry/physical_chemistry/physical_chemistry")
 def physical_chemistry():
@@ -93,6 +98,14 @@ def atoms():
     title = "Atoms"
     author = "Harshal"
     path = "chemistry/physical_chemistry/atoms.html"
+    return render(title, author, path)
+
+
+@app.route("/chemistry/physical_chemistry/periodic_table")
+def periodic_table():
+    title = "Periodic Table"
+    author = "Harshal"
+    path = "chemistry/physical_chemistry/periodic_table.html"
     return render(title, author, path)
 
 

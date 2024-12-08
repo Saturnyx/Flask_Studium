@@ -16,7 +16,7 @@ h1 {
     right: 0;
     margin: 0;
     padding-top: 35vh;
-    font-size: calc(50px + 5vw);
+    font-size: calc(50px + 6vw);
     font-family: Fractul Alt, sans-serif;
     -webkit-text-fill-color: rgb(0, 0, 0);
     -webkit-text-stroke: 2px hsl(0, 0%, 100%);
