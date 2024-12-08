@@ -47,20 +47,28 @@ h3 {
     left: 0;
     right: 0;
     margin: 0;
-    padding-top: 1vh;
+    padding-top: 5vh;
     font-size: calc(15px + 1vw);
     font-family: "Space Mono", sans-serif;
 }
 
+h4 {
+    font-weight: bold;
+    font-size: calc(10px + 1vw);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 p {
     font-size: 20px;
-    font-family: "Book Antiqua", sans-serif;
+    font-family: Garamond, serif;
     color: rgb(0, 0, 0);
     margin-bottom: 5px;
     padding-left: 0;
     padding-right: 0;
     margin-top: 10px;
     line-height: 26px;
+    text-align: justify;
 }
 
 button {
@@ -189,7 +197,6 @@ sup {
     width: 33.33%;
 }
 
-/* Clear floats after the columns */
 
 .row:after {
     content: "";

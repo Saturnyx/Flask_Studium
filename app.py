@@ -95,6 +95,8 @@ def atoms():
     path = "chemistry/physical_chemistry/atoms.html"
     return render(title, author, path)
 
+
+# ORGANIC CHEMISTRY
 @app.route("/chemistry/organic_chemistry/organic_chemistry")
 def organic_chemistry():
     title = "Organic Chemistry"
