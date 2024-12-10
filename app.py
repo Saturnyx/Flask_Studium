@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, redirect
 from markupsafe import Markup
 
-version = "10.5"
+version = "2024.0"
 
 app = Flask(__name__)
 
