@@ -151,7 +151,6 @@ def page_not_found(e):
     path = "errors/400.html"
     return render(title, author, path)
 
-
 @app.errorhandler(500)
 def page_not_found(e):
     error = '@ ' + str(datetime.datetime.now()) + ' error: 500 by ' + request.remote_addr + '\n'
