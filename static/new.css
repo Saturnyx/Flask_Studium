@@ -93,7 +93,7 @@ button:hover {
     text-decoration: none;
     color: var(--dark);
     background-color: var(--light);
-    box-shadow: 5px 5px 0 var(--dark);
+    box-shadow: 4px 4px 0 var(--dark);
 }
 
 a {
