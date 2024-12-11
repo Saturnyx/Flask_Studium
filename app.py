@@ -133,7 +133,7 @@ def physics():
     title = "Physics"
     author = "Harshal"
     path = "physics/physics.html"
-    return render(int(title, author, path))
+    return render(title, author, path)
 
 # ERRORS --------------------------------------------------------------------------------------------------------------+
 @app.errorhandler(404)
