@@ -181,6 +181,7 @@ sup {
     outline: var(--dark) solid 3px;
     position: relative;
     border-radius: 10px;
+    color: var(--dark);
     padding: 10px;
     box-shadow: 10px 10px var(--dark);
     font-family: 'Space Mono', monospace;
@@ -251,8 +252,8 @@ sup {
 }
 
 :root {
-    --light: hsl(0, 0%, 100%);
-    --dark: hsl(180, 100%, 4%);
+    --light: hsl(180, 100%, 99%);
+    --dark: hsl(180, 100%, 5%);
     --accent: hsl(180, 100%, 20%);
     --accent-transparent: hsla(180, 100%, 20%, 0.7);
 

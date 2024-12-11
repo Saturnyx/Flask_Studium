@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
 
 version = "2024.0"
@@ -30,7 +30,7 @@ def home():  # put application's code here
     return render_template("index.html", version=version, copyright=author)
 
 
-'''
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     author = "Harshal"
@@ -48,7 +48,7 @@ def search():
         return render_template("search.html", copyright=author, content=final_result)
     else:
         return render_template("search.html", copyright=author, content="")
-'''
+
 
 @app.route("/guide")
 def guide():  # put application's code here
@@ -72,6 +72,17 @@ def about_studium():  # put application's code here
     author = "Harshal"
     path = "about_studium.html"
     return render(title, author, path)
+
+
+@app.route("/about_us")
+def about_us():
+    title = "About Us"
+    author = "Harshal"
+    path = "about_us.html"
+    return render(title, author, path)
+
+
+
 
 # CHEMISTRY -----------------------------------------------------------------------------------------------------------+
 @app.route("/chemistry/chemistry")
@@ -125,6 +136,33 @@ def physics():
     author = "Harshal"
     path = "physics/physics.html"
     return render(title, author, path)
+
+
+# ERRORS --------------------------------------------------------------------------------------------------------------+
+@app.errorhandler(404)
+def page_not_found(e):
+    title = "Page Not Found"
+    author = "Harshal"
+    path = "errors/404.html"
+    return render(title, author, path)
+
+
+@app.errorhandler(400)
+def page_not_found(e):
+    title = "Bad Request"
+    author = "Harshal"
+    path = "errors/400.html"
+    return render(title, author, path)
+
+
+@app.errorhandler(500)
+def page_not_found(e):
+    file = open(".html")
+    title = "Server Error"
+    author = "Harshal"
+    path = "errors/500.html"
+    return render(title, author, path)
+
 
 if __name__ == "__main__":
     app.run()
