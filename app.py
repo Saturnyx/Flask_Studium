@@ -25,11 +25,11 @@ def search_files(query, directory="library"):
                     result_files.append(file_path)
     return result_files
 
+
 @app.route("/")
-def home():  # put application's code here
+def home():
     author = "Harshal"
     return render_template("index.html", version=version, copyright=author)
-
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -41,7 +41,7 @@ def search():
         for i in range(len(raw_results)):
             raw_results[i] = raw_results[i].replace("library\\", "")
             raw_results[i] = (
-                f'<a href="/{raw_results[i].replace('.html','')}">{raw_results[i].replace('.html','')}</a>'
+                f'<a href="/{raw_results[i].replace('.html', '')}">{raw_results[i].replace('.html', '')}</a>'
             )
         final_result = Markup(
             "<p class='search_result'>" + "<br>".join(raw_results) + "</p>"
@@ -82,6 +82,7 @@ def about_us():
     path = "about_us.html"
     return render(title, author, path)
 
+
 # CHEMISTRY -----------------------------------------------------------------------------------------------------------+
 @app.route("/chemistry/chemistry")
 def chemistry():
@@ -95,6 +96,7 @@ def chemistry():
 def chem():
     return redirect("/chemistry/chemistry")
 
+
 # PHYSICAL CHEMISTRY
 @app.route("/chemistry/physical_chemistry/physical_chemistry")
 def physical_chemistry():
@@ -102,6 +104,7 @@ def physical_chemistry():
     author = "Harshal"
     path = "chemistry/physical_chemistry/physical_chemistry.html"
     return render(title, author, path)
+
 
 @app.route("/chemistry/physical_chemistry/atoms")
 def atoms():
@@ -127,6 +130,7 @@ def organic_chemistry():
     path = "chemistry/organic_chemistry/organic_chemistry.html"
     return render(title, author, path)
 
+
 # PHYSICS -------------------------------------------------------------------------------------------------------------+
 @app.route("/physics/physics")
 def physics():
@@ -134,6 +138,7 @@ def physics():
     author = "Harshal"
     path = "physics/physics.html"
     return render(title, author, path)
+
 
 # ERRORS --------------------------------------------------------------------------------------------------------------+
 @app.errorhandler(404)
@@ -151,6 +156,7 @@ def page_not_found(e):
     path = "errors/400.html"
     return render(title, author, path)
 
+
 @app.errorhandler(500)
 def page_not_found(e):
     error = '@ ' + str(datetime.datetime.now()) + ' error: 500 by ' + request.remote_addr + '\n'
@@ -159,7 +165,6 @@ def page_not_found(e):
     title = "Server Error"
     author = "Harshal"
     path = "errors/500.html"
-
     return render(title, author, path)
 
 
