@@ -5,11 +5,11 @@
     <title>Studium</title>
     <link
             rel="stylesheet"
-            href="static/new.css"
+            href="{{ url_for('static', filename='new.css') }}"
     />
     <link
             rel="icon"
-            href="static/images/Icon-Dark[Alone].avif"
+            href="{{ url_for('static', filename="images/logo-light.svg") }}"
             type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

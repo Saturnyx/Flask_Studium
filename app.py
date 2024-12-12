@@ -10,6 +10,16 @@ app = Flask(__name__)
 log = open("logs/main.log", 'a')
 
 
+def clear_logs():
+    main_log = open("logs/main.log", 'r')
+    history_log = open("logs/history.log", 'a')
+    history_log.write(main_log.read())
+    main_log = open("logs/main.log", 'w')
+    main_log.write('')
+    main_log.close()
+    history_log.close()
+
+
 def render(title, author, path):
     content = Markup(open(f"library/{path}").read())
     return render_template("page.html", title=title, copyright=author, content=content)
@@ -168,7 +178,22 @@ def page_not_found(e):
     return render(title, author, path)
 
 
+# SPECIAL PAGES -------------------------------------------------------------------------------------------------------+
+
+@app.route("/8059<date>/hackers")
+def hackers(date):
+    current_date = datetime.datetime.now().strftime("%d%m")
+    if date == current_date:
+        return render_template("hackers.html", version=version, copyright='harshal')
+    else:
+        title = "Page Not Found"
+        author = "Harshal"
+        path = "errors/404.html"
+        return render(title, author, path)
+
+
 if __name__ == "__main__":
+    clear_logs()
     init_checkpoint = '@ ' + str(datetime.datetime.now()) + ' check: server initialized\n'
     log.write(init_checkpoint)
     print(init_checkpoint)
