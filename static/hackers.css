@@ -18,16 +18,8 @@ h1 {
     margin: 0;
     padding-top: 35vh;
     font-size: calc(50px + 6vw);
+    color: var(--light);
     font-family: Fractul Alt, sans-serif;
-    -webkit-text-fill-color: var(--dark);
-    -webkit-text-stroke: 2px var(--light);
-    text-shadow: 0 0 var(--light);
-    transition: text-shadow 0.3s ease-in-out,
-    -webkit-text-fill-color 0.3s ease-in-out;
-}
-
-h1:active {
-    text-shadow: 5px 5px var(--light);
 }
 
 h2 {
@@ -58,9 +50,8 @@ h4 {
     font-weight: bold;
     font-size: calc(10px + 1vw);
     padding-bottom: 0;
-    color: var(--dark);
     margin-bottom: 0;
-
+    color: var(--dark);
 }
 
 p {
@@ -261,9 +252,9 @@ sup {
 }
 
 :root {
-    --light: hsl(180, 100%, 99%);
-    --dark: hsl(180, 100%, 5%);
-    --accent: hsl(180, 100%, 20%);
-    --accent-transparent: hsla(180, 100%, 20%, 0.7);
+    --light: hsl(220, 100%, 99%);
+    --dark: hsl(200, 100%, 7%);
+    --accent: hsl(200, 100%, 20%);
+    --accent-transparent: hsla(200, 100%, 20%, 0.7);
 
 }

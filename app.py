@@ -187,7 +187,7 @@ def hackers(date):
         return render_template("hackers.html", version=version, copyright='Perseus')
     else:
         title = "Page Not Found"
-        author = "Harshal"
+        author = "harshal"
         path = "errors/404.html"
         return render(title, author, path)
 
