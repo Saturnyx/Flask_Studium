@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" style="background: hsl(180, 100%, 5%)">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hackers</title>
+    <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='new.css') }}"
+    />
+    <link
+            rel="icon"
+            href="{{ url_for('static', filename="images/logo-light.svg") }}"
+            type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="background">
+    <h1>Hackers</h1>
+    <p class="version-class">V{{ version }}</p>
+</div>
+<div class="horizontal-space"></div>
+<div class="content">
+    <div style="text-align: center">
+        <button>HTML</button>
+        <button>Javascript</button>
+        <button>Python</button>
+        <button>C++</button>
+        <button>Java</button>
+    </div>
+
+    <div class="horizontal-space"></div>
+    <p class="box">
+        To all Hackers,
+        <br/><br/>
+        Hi! If you ever find this page, you are really lucky. Either you used a crawler to scan this website or
+        inspected the 404 page. Either way, you are interested in hacking it. Don't worry, I'm okay with you wandering
+        around the website as long as you don't cause it to crash.<br/><br/>
+
+        ~ Perseus
+    </p>
+    <div class="horizontal-space"></div>
+</div>
+
+<div class="footer">
+    <div class="row" style="padding-left: 10px; padding-right: 10px">
+        <div class="column">
+            <b>Getting Started:</b><br/>
+            <button onclick="window.location.href='/'">Home</button>
+            <br/>
+            <button onclick="window.location.href='/guide'">Guide</button>
+            <br/>
+            <button onclick="window.location.href='/search'">Search</button>
+            <br/>
+            <button onclick="window.location.href='/help'">Help</button>
+            <br/>
+            <button onclick="window.location.href='/about_studium'">
+                About Studium
+            </button>
+        </div>
+        <div class="column">
+            <b>Topics:</b><br/>
+            <button onclick="window.location.href='/chemistry/chemistry'">
+                Chemistry
+            </button>
+            <br/>
+            <button onclick="window.location.href='/physics/physics'">Physics</button>
+            <br/>
+            <button>Biology</button>
+            <br/>
+            <button>Mathematics</button>
+            <br/>
+            <button>Computer Science</button>
+            <br/>
+        </div>
+        <div class="column">
+            <b>Helping Out:</b><br/>
+            <button>Contribute</button>
+            <br/>
+            <button onclick="window.location.href='/about_studium'">
+                About Studium
+            </button>
+            <br/>
+            <button onclick="window.location.href='/about_us'">About Us</button>
+            <br/>
+            <button>Join Us</button>
+            <br/>
+        </div>
+    </div>
+</div>
+</body>
+<div class="copyright">
+    <p
+            style="
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 10px;
+        margin: 0;
+        line-height: normal;
+        font-family:
+          Space Mono,
+          monospace;
+        color: hsl(0, 0%, 100%);
+      "
+    >
+        &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }} 2024
+    </p>
+</div>
+
+</html>
