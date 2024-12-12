@@ -180,11 +180,11 @@ def page_not_found(e):
 
 # SPECIAL PAGES -------------------------------------------------------------------------------------------------------+
 
-@app.route("/8059<date>/hackers")
+@app.route("/hackers/code=8059<date>")
 def hackers(date):
     current_date = datetime.datetime.now().strftime("%d%m")
     if date == current_date:
-        return render_template("hackers.html", version=version, copyright='harshal')
+        return render_template("hackers.html", version=version, copyright='Perseus')
     else:
         title = "Page Not Found"
         author = "Harshal"
