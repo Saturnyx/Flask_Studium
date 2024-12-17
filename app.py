@@ -4,7 +4,7 @@ import os
 from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
 
-version = "2024.9"
+version = "12024.9"
 
 app = Flask(__name__)
 log = open("logs/main.log", 'a')
