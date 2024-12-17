@@ -16,17 +16,11 @@ h1 {
   margin: 0;
   padding-top: 30vh;
   font-size: calc(50px + 10vw);
-  font-family: "Unica One", sans-serif;
+  font-family: "Silkscreen", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  font-weight: 400;
   color: var(--light);
-  text-shadow: 0 0 hsla(0, 0%, 100%, 0.5);
-  transition: text-shadow 0.3s ease-in-out,
-    -webkit-text-fill-color 0.3s ease-in-out;
-}
-
-h1:hover {
-  text-shadow: 7px 7px hsla(0, 0%, 100%, 0.2);
 }
 
 h2 {
@@ -36,9 +30,9 @@ h2 {
   margin: 0;
   padding-top: 20vh;
   font-size: calc(20px + 5vw);
-  font-family: "Unica One", sans-serif;
+  font-family: "Silkscreen", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 900;
+  font-weight: 400;
   font-style: normal;
   color: var(--dark);
 }
@@ -51,7 +45,7 @@ h3 {
   padding-top: 5vh;
   font-size: calc(20px + 1vw);
   color: var(--dark);
-  font-family: "Space Mono", serif;
+  font-family: "JetBrains Mono", monospace;
   font-weight: bold;
   font-style: italic;
 }
@@ -61,7 +55,7 @@ h4 {
   padding-bottom: 0;
   color: var(--dark);
   margin-bottom: 0;
-  font-family: "Space Mono", serif;
+  font-family: "JetBrains Mono", monospace;
   font-weight: bold;
   font-style: normal;
   text-decoration: underline 1px var(--dark);
@@ -77,9 +71,9 @@ p {
   padding-left: 0;
   padding-right: 0;
   margin-top: 10px;
-  line-height: 26px;
+  line-height: 20px;
   text-align: justify;
-  font-family: "Crimson Text", serif;
+  font-family: "Geo", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -87,7 +81,7 @@ p {
 }
 
 button {
-  font-family: "Space Mono", monospace;
+  font-family: "Geo", monospace;
   font-weight: 400;
   font-style: normal;
   font-size: calc(0.7vw + 7px);
@@ -120,11 +114,15 @@ a:hover {
   font-weight: bold;
 }
 
+b {
+  font-size: larger;
+}
+
 sup {
-  font-family: "Space Mono", monospace;
+  font-family: "Geo", monospace;
   font-weight: 400;
   font-style: normal;
-  font-size: 12px;
+  font-size: 15px;
   color: var(--dark);
 }
 
@@ -135,36 +133,11 @@ sup {
   padding-left: 10vw;
 }
 
-.search {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 15px;
-  border-radius: 30px;
-  border: 2px solid var(--dark);
-  margin: 5px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 30px;
-  padding: 5px 5px 5px 20px;
-  color: var(--dark);
-}
-
 .mono {
-  font-family: "Space Mono", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  color: var(--dark);
-  padding-left: 0;
-}
-
-.search_result {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
   color: var(--dark);
   padding-left: 0;
 }
@@ -175,8 +148,8 @@ sup {
   height: 30px;
   padding-left: 10px;
   font-size: 100%;
-  top: calc(100vh - 30px);
-  font-family: "Space Mono", monospace;
+  top: calc(100vh - 25px);
+  font-family: "Geo", monospace;
   font-weight: 400;
   font-style: normal;
   color: var(--light);
@@ -206,12 +179,13 @@ sup {
   position: relative;
   border-radius: 10px;
   color: var(--dark);
-  padding: 10px;
+  padding: 20px;
   box-shadow: 10px 10px var(--dark);
-  font-family: "Space Mono", monospace;
+  font-family: "Geo", monospace;
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 22px;
   margin-bottom: 40px;
   background-color: var(--light);
   transition: box-shadow 0.3s ease-in-out, margin-left 0.3s ease-in-out,
@@ -243,7 +217,7 @@ sup {
   height: auto;
   background-color: var(--dark);
   color: var(--light);
-  font-family: "Space Mono", monospace;
+  font-family: "Geo", monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -265,6 +239,7 @@ sup {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: var(--accent-transparent);
+  font-family: "Geo", monospace;
 }
 
 .logo {
@@ -287,8 +262,8 @@ sup {
 }
 
 :root {
-  --light: hsl(180, 100%, 99%);
-  --dark: hsl(180, 100%, 5%);
-  --accent: hsl(180, 100%, 15%);
-  --accent-transparent: hsla(180, 100%, 15%, 0.7);
+  --light: hsl(200, 100%, 99%);
+  --dark: hsl(200, 100%, 5%);
+  --accent: hsl(200, 100%, 15%);
+  --accent-transparent: hsla(200, 100%, 15%, 0.7);
 }

@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <title>Hackers</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='hacker.css') }}"
+    />
     <link rel="icon" href="{{ url_for('static',
     filename="images/logo-light.svg") }}" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="background">
       <h1>Hackers</h1>
-      <p class="version-class">V12024.9</p>
+      <p class="version-class">{{ version }}</p>
     </div>
     <div class="horizontal-space"></div>
     <div class="content">
@@ -57,18 +66,18 @@
         <div class="column">
           <b>Topics:</b><br />
           <button onclick="window.location.href='/chemistry/chemistry'">
-            Chemistry
+            HTML
           </button>
           <br />
           <button onclick="window.location.href='/physics/physics'">
-            Physics
+            Javascript
           </button>
           <br />
-          <button>Biology</button>
+          <button>Python</button>
           <br />
-          <button>Mathematics</button>
+          <button>C++</button>
           <br />
-          <button>Computer Science</button>
+          <button>Java</button>
           <br />
         </div>
         <div class="column">
@@ -91,16 +100,15 @@
     <p
       style="
         font-size: 12px;
-        padding-left: 5px;
+        padding-left: 10px;
         padding-right: 10px;
         margin: 0;
         line-height: normal;
-        font-family: Space Mono, monospace;
         color: hsl(0, 0%, 100%);
       "
     >
-      &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }}
-      2024
+      &nbsp;<b style="font-family: Arial, serif">©</b>&nbsp;&nbsp; Copyright {{
+      copyright }} 2024
     </p>
   </div>
 </html>

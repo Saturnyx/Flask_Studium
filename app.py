@@ -4,7 +4,7 @@ import os
 from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
 
-version = "12024.9"
+version = "12024.9.2"
 
 app = Flask(__name__)
 log = open("logs/main.log", "a")
@@ -185,13 +185,15 @@ def page_not_found(e):
 
 
 # SPECIAL PAGES -------------------------------------------------------------------------------------------------------+
-
-
 @app.route("/hackers/code=8059<date>")
 def hackers(date):
     current_date = datetime.datetime.now().strftime("%d%m")
     if date == current_date:
-        return render_template("hackers.html", version=version, copyright="Perseus")
+        return render_template(
+            "hackers.html",
+            version="v" + version,
+            copyright="Perseus",
+        )
     else:
         title = "Page Not Found"
         author = "harshal"
