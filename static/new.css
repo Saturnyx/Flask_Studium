@@ -151,6 +151,14 @@ sup {
   color: var(--dark);
 }
 
+.rounded_button {
+  border-radius: 100px;
+  height: 35px;
+  width: 35px;
+  padding: 5px 0 0;
+  bottom: 0;
+}
+
 .mono {
   font-family: "Space Mono", monospace;
   font-weight: 400;
