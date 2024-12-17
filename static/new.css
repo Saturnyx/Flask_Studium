@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--light);
   padding: 0;
@@ -64,12 +68,12 @@ h4 {
   font-family: "Space Mono", serif;
   font-weight: bold;
   font-style: normal;
-  text-decoration: underline 1px var(--dark);
+  text-decoration: underline 2px var(--dark);
   text-underline-offset: 2px;
 }
 
 h4:hover {
-  text-decoration: underline dotted 2px var(--dark);
+  text-decoration: underline wavy 2px var(--dark);
 }
 
 p {
@@ -280,6 +284,22 @@ sup {
   left: 0;
   padding: 20px;
   position: fixed;
+}
+
+.toc {
+  font-family: "Space Mono", monospace;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--dark);
+  padding-left: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  text-decoration: underline solid 2px var(--dark);
+}
+
+.toc:hover {
+  text-decoration: underline solid 2px var(--dark);
 }
 
 ::-webkit-scrollbar {
