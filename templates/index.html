@@ -1,160 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" style="background: hsl(180, 100%, 5%)">
-<head>
-    <meta charset="UTF-8"/>
+  <head>
+    <meta charset="UTF-8" />
     <title>Studium</title>
-    <link
-            rel="stylesheet"
-            href="{{ url_for('static', filename='new.css') }}"
-    />
-    <link
-            rel="icon"
-            href="{{ url_for('static', filename="images/logo-light.svg") }}"
-            type="image/x-icon"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unica+One&display=swap"
-          rel="stylesheet">
-    <title>Studium</title>
-</head>
-<body>
-<div class="background">
-    <h1>Studium</h1>
-    <p class="version-class">V{{ version }}</p>
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}" />
+    <link rel="icon" href="{{ url_for('static',
+    filename="images/logo-light.svg") }}" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-</div>
-<div class="horizontal-space"></div>
-<div class="content">
-    <div style="text-align: center">
-        <button onclick="window.location.href='/chemistry/chemistry'">Chemistry</button>
-        <button onclick="window.location.href='/physics/physics'">Physics</button>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unica+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Studium</title>
+  </head>
+  <body>
+    <div class="background">
+      <h1>Studium</h1>
+      <p class="version-class">V{{ version }}</p>
+    </div>
+    <div class="horizontal-space"></div>
+    <div class="content">
+      <div style="text-align: center">
+        <button onclick="window.location.href='/chemistry/chemistry'">
+          Chemistry
+        </button>
+        <button onclick="window.location.href='/physics/physics'">
+          Physics
+        </button>
         <button>Biology</button>
         <button>Mathematics</button>
         <button>Computer Science</button>
         <button>Contribute</button>
-    </div>
+      </div>
 
-    <div class="horizontal-space"></div>
-    <p>
+      <div class="horizontal-space"></div>
+      <p>
         Welcome to Studium – Your Ultimate Free Notes Sharing Platform! Crafted
         with the collaboration of fellow learners, our mission at Studium
         embodies empowerment through education in every sense. Here's why you
         need us:
-    </p>
-    <div class="horizontal-space"></div>
-    <!-- Accessibility -->
-    <div class="box">
-        <b>Accessibility</b><br/>
+      </p>
+      <div class="horizontal-space"></div>
+      <!-- Accessibility -->
+      <div class="box">
+        <b>Accessibility</b><br />
         No more barriers to knowledge acquisition; on Studium we provide a free
         space where academic materials can be freely accessed and shared without
         the constraints of financial limitations or institutional restrictions.
         Our open-source platform ensures complete transparency, allowing
         everyone equal opportunity in learning for all ages across various
         disciplines.
-    </div>
-    <!-- Collaborative Learning -->
-    <div class="box">
-        <b>Collaborative Learning</b><br/>
+      </div>
+      <!-- Collaborative Learning -->
+      <div class="box">
+        <b>Collaborative Learning</b><br />
         At Studium, we believe that true understanding comes through
         collaboration; students sharing their notes not only helps others but
         also reinforces the knowledge they have themselves. By contributing to
         our platform, you are joining a network of learners who value collective
         intelligence and shared growth in academia.
-    </div>
-    <!-- Open Source & Free -->
-    <div class="box">
-        <b>Open Source & Free</b><br/>
+      </div>
+      <!-- Open Source & Free -->
+      <div class="box">
+        <b>Open Source & Free</b><br />
         Our dedication extends beyond education to the core values that support
         it; as a platform created by fellow learners, Studium advocates for
         open-source software that is free and accessible to everyone seeking
         academic help or wishing to share their knowledge—the true essence of
         educational freedom and collaboration.
-    </div>
-    <!-- Private -->
-    <div class="box">
-        <b>Private</b><br/>
+      </div>
+      <!-- Private -->
+      <div class="box">
+        <b>Private</b><br />
         At Studium, we believe that true understanding comes through
         collaboration; students sharing their notes not only helps others but
         also reinforces the knowledge they have themselves. By contributing to
         our platform, you are joining a network of learners who value collective
         intelligence and shared growth in academia.
-    </div>
+      </div>
 
-    <p>
+      <p>
         Join us at Studium today; together let's break free from the constraints
         of traditional education, champion knowledge sharing amongst peers,
         empower each other to learn more effectively – because learning should
         not be an individual endeavor but rather one that connects and enriches
         every learner in this global community.
-    </p>
-    <div class="horizontal-space-10"></div>
-</div>
-
-<div class="footer">
-    <div class="row" style="padding-left: 10px; padding-right: 10px">
-        <div class="column">
-            <b>Getting Started:</b><br/>
-            <button onclick="window.location.href='/'">Home</button>
-            <br/>
-            <button onclick="window.location.href='/guide'">Guide</button>
-            <br/>
-            <button onclick="window.location.href='/search'">Search</button>
-            <br/>
-            <button onclick="window.location.href='/help'">Help</button>
-            <br/>
-            <button onclick="window.location.href='/about_studium'">
-                About Studium
-            </button>
-        </div>
-        <div class="column">
-            <b>Topics:</b><br/>
-            <button onclick="window.location.href='/chemistry/chemistry'">
-                Chemistry
-            </button>
-            <br/>
-            <button onclick="window.location.href='/physics/physics'">Physics</button>
-            <br/>
-            <button>Biology</button>
-            <br/>
-            <button>Mathematics</button>
-            <br/>
-            <button>Computer Science</button>
-            <br/>
-        </div>
-        <div class="column">
-            <b>Helping Out:</b><br/>
-            <button>Contribute</button>
-            <br/>
-            <button onclick="window.location.href='/about_studium'">
-                About Studium
-            </button>
-            <br/>
-            <button onclick="window.location.href='/about_us'">About Us</button>
-            <br/>
-            <button>Join Us</button>
-            <br/>
-        </div>
+      </p>
+      <div class="horizontal-space-10"></div>
     </div>
-</div>
-</body>
-<div class="copyright">
+
+    <div class="footer">
+      <div class="row" style="padding-left: 10px; padding-right: 10px">
+        <div class="column">
+          <b>Getting Started:</b><br />
+          <button onclick="window.location.href='/'">Home</button>
+          <br />
+          <button onclick="window.location.href='/guide'">Guide</button>
+          <br />
+          <button onclick="window.location.href='/search'">Search</button>
+          <br />
+          <button onclick="window.location.href='/help'">Help</button>
+          <br />
+          <button onclick="window.location.href='/about_studium'">
+            About Studium
+          </button>
+        </div>
+        <div class="column">
+          <b>Topics:</b><br />
+          <button onclick="window.location.href='/chemistry/chemistry'">
+            Chemistry
+          </button>
+          <br />
+          <button onclick="window.location.href='/physics/physics'">
+            Physics
+          </button>
+          <br />
+          <button>Biology</button>
+          <br />
+          <button>Mathematics</button>
+          <br />
+          <button>Computer Science</button>
+          <br />
+        </div>
+        <div class="column">
+          <b>Helping Out:</b><br />
+          <button>Contribute</button>
+          <br />
+          <button onclick="window.location.href='/about_studium'">
+            About Studium
+          </button>
+          <br />
+          <button onclick="window.location.href='/about_us'">About Us</button>
+          <br />
+          <button>Join Us</button>
+          <br />
+        </div>
+      </div>
+    </div>
+  </body>
+  <div class="copyright">
     <p
-            style="
+      style="
         font-size: 12px;
         padding-left: 5px;
         padding-right: 10px;
         margin: 0;
         line-height: normal;
-        font-family:
-          Space Mono,
-          monospace;
+        font-family: Space Mono, monospace;
         color: hsl(0, 0%, 100%);
       "
     >
-        &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }} 2024
+      &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }}
+      2024
     </p>
-</div>
-
+  </div>
 </html>

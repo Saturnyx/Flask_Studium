@@ -1,72 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" style="background: hsl(180, 100%, 4%)">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Search</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}" />
+    <link rel="icon" href="{{ url_for('static',
+    filename="images/logo-light.svg") }}" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            rel="stylesheet"
-            href="{{ url_for('static', filename='new.css') }}"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unica+One&display=swap"
+      rel="stylesheet"
     />
-    <link
-            rel="icon"
-            href="{{ url_for('static', filename="images/logo-light.svg") }}"
-            type="image/x-icon"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unica+One&display=swap"
-          rel="stylesheet">
-<body>
-<h2><label for="search">Search</label></h2>
-<div class="horizontal-space-10"></div>
-<div class="content">
-    <form method="post">
+  </head>
+  <body>
+    <h2><label for="search">Search</label></h2>
+    <div class="horizontal-space-10"></div>
+    <div class="content">
+      <form method="post">
         <input
-                type="text"
-                id="search"
-                name="search_query"
-                placeholder="SEARCH..."
-                class="search"
+          type="text"
+          id="search"
+          name="search_query"
+          placeholder="SEARCH..."
+          class="search"
         />
-    </form>
-    <div style="text-align: center">
+      </form>
+      <div style="text-align: center">
         <button onclick="window.location.href='/'">Home</button>
         <button onclick="window.location.href='/chemistry/chemistry'">
-            Chemistry
+          Chemistry
         </button>
         <button>Physics</button>
         <button>Biology</button>
         <button>Mathematics</button>
         <button>Computer Science</button>
         <button>Contribute</button>
+      </div>
+      <div class="horizontal-space-10"></div>
+
+      {{ content|safe }}
+
+      <div class="horizontal-space-10"></div>
+      <div class="horizontal-space-10"></div>
+      <div class="horizontal-space-10"></div>
+      <div class="horizontal-space-10"></div>
+      <div class="horizontal-space-10"></div>
     </div>
-    <div class="horizontal-space-10"></div>
-
-    {{ content|safe }}
-
-    <div class="horizontal-space-10"></div>
-    <div class="horizontal-space-10"></div>
-    <div class="horizontal-space-10"></div>
-    <div class="horizontal-space-10"></div>
-    <div class="horizontal-space-10"></div>
-</div>
-</body>
-<div class="copyright">
+  </body>
+  <div class="copyright">
     <p
-            style="
+      style="
         font-size: 12px;
         padding-left: 5px;
         padding-right: 10px;
         margin: 0;
         line-height: normal;
-        font-family:
-          Space Mono,
-          monospace;
+        font-family: Space Mono, monospace;
         color: hsl(0, 0%, 100%);
       "
     >
-        &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }} 2024
+      &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }}
+      2024
     </p>
-</div>
+  </div>
 </html>

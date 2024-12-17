@@ -7,15 +7,15 @@ from markupsafe import Markup
 version = "12024.9"
 
 app = Flask(__name__)
-log = open("logs/main.log", 'a')
+log = open("logs/main.log", "a")
 
 
 def clear_logs():
-    main_log = open("logs/main.log", 'r')
-    history_log = open("logs/history.log", 'a')
+    main_log = open("logs/main.log", "r")
+    history_log = open("logs/history.log", "a")
     history_log.write(main_log.read())
-    main_log = open("logs/main.log", 'w')
-    main_log.write('')
+    main_log = open("logs/main.log", "w")
+    main_log.write("")
     main_log.close()
     history_log.close()
 
@@ -169,7 +169,13 @@ def page_not_found(e):
 
 @app.errorhandler(500)
 def page_not_found(e):
-    error = '@ ' + str(datetime.datetime.now()) + ' error: 500 by ' + request.remote_addr + '\n'
+    error = (
+        "@ "
+        + str(datetime.datetime.now())
+        + " error: 500 by "
+        + request.remote_addr
+        + "\n"
+    )
     log.write(error)
     print(error)
     title = "Server Error"
@@ -180,11 +186,12 @@ def page_not_found(e):
 
 # SPECIAL PAGES -------------------------------------------------------------------------------------------------------+
 
+
 @app.route("/hackers/code=8059<date>")
 def hackers(date):
     current_date = datetime.datetime.now().strftime("%d%m")
     if date == current_date:
-        return render_template("hackers.html", version=version, copyright='Perseus')
+        return render_template("hackers.html", version=version, copyright="Perseus")
     else:
         title = "Page Not Found"
         author = "harshal"
@@ -194,11 +201,15 @@ def hackers(date):
 
 if __name__ == "__main__":
     clear_logs()
-    init_checkpoint = '@ ' + str(datetime.datetime.now()) + ' check: server initialized\n'
+    init_checkpoint = (
+        "@ " + str(datetime.datetime.now()) + " check: server initialized\n"
+    )
     log.write(init_checkpoint)
     print(init_checkpoint)
     app.run()
-    close_checkpoint = '@ ' + str(datetime.datetime.now()) + ' check: server terminated\n'
+    close_checkpoint = (
+        "@ " + str(datetime.datetime.now()) + " check: server terminated\n"
+    )
     log.write(close_checkpoint)
     print(close_checkpoint)
     log.close()
