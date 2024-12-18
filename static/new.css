@@ -155,14 +155,6 @@ sup {
   color: var(--dark);
 }
 
-.rounded_button {
-  border-radius: 100px;
-  height: 35px;
-  width: 35px;
-  padding: 5px 0 0;
-  bottom: 0;
-}
-
 .mono {
   font-family: "Space Mono", monospace;
   font-weight: 400;
@@ -258,7 +250,7 @@ sup {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
+  font-size: calc(5px + 1vw);
   padding: 50px 10px 10px 50px;
   position: relative;
   display: block;
@@ -302,6 +294,56 @@ sup {
   text-decoration: underline solid 2px var(--dark);
 }
 
+.credits {
+  color: var(--dark);
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.credits-title {
+  color: var(--dark);
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.alert {
+  outline: var(--dark-red) solid 3px;
+  position: relative;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 10px 10px var(--dark-red);
+  color: var(--dark-red);
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  margin-bottom: 40px;
+  background-color: var(--light-red);
+  transition: box-shadow 0.3s ease-in-out, margin-left 0.3s ease-in-out,
+    margin-right 0.3s ease-in-out, padding-left 0.3s ease-in-out,
+    padding-right 0.3s ease-in-out;
+}
+
+.alert:hover {
+  box-shadow: 15px 15px var(--dark-red);
+}
+
+.alert::selection {
+  color: var(--light-red);
+  background: var(--dark-red);
+  height: 20%;
+}
+
+.red-selection::selection {
+  color: var(--light-red);
+  background: var(--dark-red);
+  height: 20%;
+}
+
 ::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none;
@@ -319,4 +361,6 @@ sup {
   --dark: hsl(180, 100%, 5%);
   --accent: hsl(180, 100%, 15%);
   --accent-transparent: hsla(180, 100%, 15%, 0.7);
+  --dark-red: hsl(0, 100%, 15%);
+  --light-red: hsl(0, 100%, 80%);
 }

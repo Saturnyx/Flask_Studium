@@ -150,6 +150,25 @@ def physics():
     return render(title, author, path)
 
 
+# CONTRIBUTING --------------------------------------------------------------------------------------------------------+
+
+
+@app.route("/contribute")
+def contribute():
+    title = "Contribute"
+    author = "Harshal"
+    path = "contributions/contribute.html"
+    return render(title, author, path)
+
+
+@app.route("/contribute/notes")
+def contribute_notes():
+    title = "Submit Notes"
+    author = "Harshal"
+    path = "contributions/notes.html"
+    return render(title, author, path)
+
+
 # ERRORS --------------------------------------------------------------------------------------------------------------+
 @app.errorhandler(404)
 def page_not_found(e):
