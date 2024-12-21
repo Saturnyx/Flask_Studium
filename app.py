@@ -22,6 +22,8 @@ def clear_logs():
 
 def render(title, author, path):
     content = Markup(open(f"library/{path}").read())
+    if content == "":
+        content = Markup(open("library/errors/empty.html").read())
     return render_template("page.html", title=title, copyright=author, content=content)
 
 
@@ -107,28 +109,28 @@ def chem():
     return redirect("/chemistry/chemistry")
 
 
-# PHYSICAL CHEMISTRY
-@app.route("/chemistry/physical_chemistry/physical_chemistry")
-def physical_chemistry():
-    title = "Physical Chemistry"
+# INORGANIC CHEMISTRY
+@app.route("/chemistry/inorganic_chemistry/inorganic_chemistry")
+def inorganic_chemistry():
+    title = "Inorganic Chemistry"
     author = "Harshal"
-    path = "chemistry/physical_chemistry/physical_chemistry.html"
+    path = "chemistry/inorganic_chemistry/inorganic_chemistry.html"
     return render(title, author, path)
 
 
-@app.route("/chemistry/physical_chemistry/atoms")
+@app.route("/chemistry/inorganic_chemistry/atoms")
 def atoms():
     title = "Atoms"
     author = "Harshal"
-    path = "chemistry/physical_chemistry/atoms.html"
+    path = "chemistry/inorganic_chemistry/atoms.html"
     return render(title, author, path)
 
 
-@app.route("/chemistry/physical_chemistry/periodic_table")
+@app.route("/chemistry/inorganic_chemistry/periodic_table")
 def periodic_table():
     title = "Periodic Table"
     author = "Harshal"
-    path = "chemistry/physical_chemistry/periodic_table.html"
+    path = "chemistry/inorganic_chemistry/periodic_table.html"
     return render(title, author, path)
 
 
