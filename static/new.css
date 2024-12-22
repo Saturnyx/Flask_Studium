@@ -82,12 +82,12 @@ p {
   padding-left: 0;
   padding-right: 0;
   margin-top: 10px;
-  line-height: 26px;
+  line-height: 30px;
   text-align: justify;
   font-family: "Crimson Pro", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 21px;
   color: var(--dark);
 }
 
@@ -120,6 +120,7 @@ a {
   color: var(--accent);
   text-decoration: none;
   font-weight: normal;
+  transition: font-weight 0.3s ease-in-out;
 }
 
 a:hover {
@@ -134,11 +135,18 @@ sup {
   color: var(--dark);
 }
 
+u {
+  text-decoration-thickness: 4%;
+  text-decoration-color: var(--dark);
+  text-underline-offset: 10%;
+  font-weight: normal;
+}
+
 .content {
   left: 0;
   right: 0;
-  padding-right: 10vw;
-  padding-left: 10vw;
+  padding-right: 12vw;
+  padding-left: 12vw;
 }
 
 .search {
@@ -276,7 +284,7 @@ sup {
 .logo {
   top: 0;
   left: 0;
-  padding: 20px;
+  padding: calc(3vw);
   position: fixed;
 }
 
