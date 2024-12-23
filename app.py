@@ -54,11 +54,8 @@ def search():
         for i in range(len(raw_results)):
             raw_results[i] = raw_results[i].replace("library\\", "")
             raw_results[i] = (
-                f'<a href="/{raw_results[i].replace('.html', '')}">{raw_results[i].replace('.html', '')}</a>'
-            )
-        final_result = Markup(
-            "<p class='search_result'>" + "<br>".join(raw_results) + "</p>"
-        )
+                f'<a href="/{raw_results[i].replace('.html', '')}">{raw_results[i].replace('.html', '')}</a>')
+        final_result = Markup("<p class='search_result'>" + "<br>".join(raw_results) + "</p>")
         return render_template("search.html", copyright=author, content=final_result)
     else:
         return render_template("search.html", copyright=author, content="")
@@ -226,14 +223,12 @@ def hackers(date):
 if __name__ == "__main__":
     clear_logs()
     init_checkpoint = (
-        "@ " + str(datetime.datetime.now()) + " check: server initialized\n"
-    )
+            "@ " + str(datetime.datetime.now()) + " check: server initialized\n")
     log.write(init_checkpoint)
     print(init_checkpoint)
     app.run(port=port_number)
     close_checkpoint = (
-        "@ " + str(datetime.datetime.now()) + " check: server terminated\n"
-    )
+            "@ " + str(datetime.datetime.now()) + " check: server terminated\n")
     log.write(close_checkpoint)
     print(close_checkpoint)
     log.close()
