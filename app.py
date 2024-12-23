@@ -5,7 +5,7 @@ from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
 
 version = "12024.9.2"
-port_number = 34877
+port_number = 40915
 
 app = Flask(__name__)
 log = open("logs/main.log", "a")
