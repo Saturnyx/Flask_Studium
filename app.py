@@ -54,7 +54,7 @@ def search():
         for i in range(len(raw_results)):
             raw_results[i] = raw_results[i].replace("library\\", "")
             raw_results[i] = \
-                (f'<a href="/{raw_results[i].replace('.html', '')}">{raw_results[i].replace('.html', '')}</a>')
+                (f'<a href="/{raw_results[i].replace(r'.html', '')}">{raw_results[i].replace('.html', '')}</a>')
         final_result = Markup("<p class='search_result'>" + "<br>".join(raw_results) + "</p>")
         return render_template("search.html", copyright=author, content=final_result)
     else:
