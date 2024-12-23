@@ -5,6 +5,7 @@ from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
 
 version = "12024.9.2"
+port_number = 34877
 
 app = Flask(__name__)
 log = open("logs/main.log", "a")
@@ -229,7 +230,7 @@ if __name__ == "__main__":
     )
     log.write(init_checkpoint)
     print(init_checkpoint)
-    app.run()
+    app.run(port=port_number)
     close_checkpoint = (
         "@ " + str(datetime.datetime.now()) + " check: server terminated\n"
     )
