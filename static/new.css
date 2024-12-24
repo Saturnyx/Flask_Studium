@@ -25,13 +25,13 @@ h1 {
   font-optical-sizing: auto;
   font-style: normal;
   color: var(--light);
-  text-shadow: 0 0 hsla(0, 0%, 100%, 0.5);
+  text-shadow: 0 0 var(--transparent);
   transition: text-shadow 0.3s ease-in-out,
     -webkit-text-fill-color 0.3s ease-in-out;
 }
 
 h1:hover {
-  text-shadow: 7px 7px hsla(0, 0%, 100%, 0.3);
+  text-shadow: 7px 7px var(--transparent);
 }
 
 h2 {
@@ -369,6 +369,7 @@ u {
 :root {
   --light: hsl(180, 100%, 99%);
   --dark: hsl(180, 100%, 5%);
+  --transparent: hsla(0, 0%, 100%, 0.3);
   --accent: hsl(180, 100%, 15%);
   --accent-transparent: hsla(180, 100%, 15%, 0.7);
   --light-red: hsl(0, 100%, 80%);
