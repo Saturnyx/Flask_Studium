@@ -5,40 +5,90 @@ from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
 
 version = "12024.9.2"
-port_number = 40915
+port_number = 47777
 
 app = Flask(__name__)
-log = open("logs/main.log", "a")
 
 
 def clear_logs():
-    main_log = open("logs/main.log", "r")
-    history_log = open("logs/history.log", "a")
-    history_log.write(main_log.read())
-    main_log = open("logs/main.log", "w")
-    main_log.write("")
-    main_log.close()
-    history_log.close()
+    """
+    Clear logs by transferring the contents of the main log file to the history log file.
+
+    The function reads the contents of the main log file (logs/main.log) and appends them
+    to the history log file (logs/history.log). After transferring the data, it clears the
+    contents of the main log file.
+
+    :raises FileNotFoundError: If either logs/main.log or logs/history.log cannot be found.
+    :raises IOError: If there is an issue, reading from or writing to any of the log files.
+
+    :return: None
+    """
+    if not os.path.exists("logs"):
+        print("logs directory does not exist")
+        os.makedirs("logs", exist_ok=True)
+    elif not os.path.exists("logs/main.log"):
+        print("logs/main.log does not exist")
+        open("logs/main.log", "w").close()
+    elif not os.path.exists("logs/history.log"):
+        print("logs/history.log does not exist")
+        open("logs/history.log", "w").close()
+    with open("logs/main.log", "r") as f:
+        main_log = f.read()
+    with open("logs/history.log", "a") as f:
+        f.write(main_log)
+    with open("logs/main.log", "w") as f:
+        f.write("")
 
 
 def render(title, author, path):
-    content = Markup(open(f"library/{path}").read())
+    """
+    Renders a web page using a provided template and dynamic content. The method retrieves
+    HTML content from the specified file path, and if the file is empty, a default error
+    page is displayed. The title, author, and content are injected into the template for
+    rendering.
+
+    :param title: The title of the page to be displayed.
+    :type title: str
+    :param author: The author or copyright information of the page.
+    :type author: str
+    :param path: The relative path to the content file within the "library" directory.
+    :type path: str
+    :return: Rendered web page as an HTML string.
+    :rtype: str
+    """
+    try:
+        content = Markup(open(f"library/{path}").read())
+    except FileNotFoundError:
+        content = Markup(open(f"library/errors/empty.html").read())
     if content == "":
         content = Markup(open("library/errors/empty.html").read())
     return render_template("page.html", title=title, copyright=author, content=content)
 
 
 def search_files(query, directory="library"):
+    """
+    Searches for files containing the specified query string within a given directory. The function
+    recursively traverses the directory structure, opens each file, checks its contents, and adds files
+    containing the query to the result list.
+
+    :param query: The string to be searched within the files is
+    :type query: str
+    :param directory: The directory path where the search begins. Defaults to "library"
+    :type directory: str
+    :return: A list of file paths containing the query string
+    :rtype: list
+    """
     result_files = []
     for root, _, files in os.walk(directory):
         for file in files:
             file_path = os.path.join(root, file)
-            with open(file_path, "r", encoding="utf-8") as f:
+            with open(file_path, "r") as f:
                 if query in f.read():
                     result_files.append(file_path)
     return result_files
 
 
+# MAIN PAGES ----------------------------------------------------------------------------------------------------------+
 @app.route("/")
 def home():
     author = "Harshal"
@@ -49,7 +99,9 @@ def home():
 def search():
     author = "Harshal"
     if request.method == "POST":
-        search_query = request.form.get("search_query")
+        search_query = request.form.get("search_query", "").strip()
+        if not search_query:
+            return render_template("search.html", content="No search query provided.")
         raw_results = search_files(search_query)
         for i in range(len(raw_results)):
             raw_results[i] = (
@@ -156,8 +208,6 @@ def physics():
 
 
 # CONTRIBUTING --------------------------------------------------------------------------------------------------------+
-
-
 @app.route("/contribute")
 def contribute():
     title = "Contribute"
@@ -184,7 +234,7 @@ def page_not_found(e):
 
 
 @app.errorhandler(400)
-def page_not_found(e):
+def bad_request(e):
     title = "Bad Request"
     author = "Harshal"
     path = "errors/400.html"
@@ -192,7 +242,7 @@ def page_not_found(e):
 
 
 @app.errorhandler(500)
-def page_not_found(e):
+def server_error(e):
     error = (
         "@ "
         + str(datetime.datetime.now())
@@ -200,7 +250,8 @@ def page_not_found(e):
         + request.remote_addr
         + "\n"
     )
-    log.write(error)
+    with open("logs/main.log", "a") as log:
+        log.write(error)
     print(error)
     title = "Server Error"
     author = "Harshal"
@@ -230,12 +281,17 @@ if __name__ == "__main__":
     init_checkpoint = (
         "@ " + str(datetime.datetime.now()) + " check: server initialized\n"
     )
-    log.write(init_checkpoint)
+    with open("logs/main.log", "a") as log:
+        log.write(init_checkpoint)
     print(init_checkpoint)
-    app.run(port=port_number)
+    try:
+        app.run(port=port_number)
+    except OSError:
+        app.run(port=0)
     close_checkpoint = (
         "@ " + str(datetime.datetime.now()) + " check: server terminated\n"
     )
-    log.write(close_checkpoint)
-    print(close_checkpoint)
-    log.close()
+    with open("logs/main.log", "a") as log:
+        log.write(close_checkpoint)
+        print(close_checkpoint)
+        log.close()
