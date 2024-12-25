@@ -19,15 +19,27 @@
     <h2><label for="search">Search</label></h2>
     <div class="horizontal-space-10"></div>
     <div class="content">
-      <form method="post">
-        <input
-          type="text"
-          id="search"
-          name="search_query"
-          placeholder="SEARCH..."
-          class="search"
-        />
-      </form>
+      <div style="display: flex; justify-content: center; text-align: center">
+        <form method="post" style="width: 70%">
+          <input
+            type="text"
+            id="search"
+            name="search_query"
+            placeholder="SEARCH..."
+            class="search"
+          />
+          <button id="search" type="submit">Search</button>
+        </form>
+      </div>
+      <br />
+      <div class="horizontal-space-10"></div>
+
+      {{ content|safe }}
+
+      <div class="horizontal-space-10"></div>
+      <div class="horizontal-space-10"></div>
+      <div class="horizontal-space-10"></div>
+      <div class="horizontal-space-10"></div>
       <div style="text-align: center">
         <button onclick="window.location.href='/'">Home</button>
         <button onclick="window.location.href='/chemistry/chemistry'">
@@ -39,14 +51,6 @@
         <button>Computer Science</button>
         <button>Contribute</button>
       </div>
-      <div class="horizontal-space-10"></div>
-
-      {{ content|safe }}
-
-      <div class="horizontal-space-10"></div>
-      <div class="horizontal-space-10"></div>
-      <div class="horizontal-space-10"></div>
-      <div class="horizontal-space-10"></div>
       <div class="horizontal-space-10"></div>
     </div>
   </body>
@@ -62,8 +66,7 @@
         color: hsl(0, 0%, 100%);
       "
     >
-      &nbsp;<b style="font-family: Arial, serif">©</b> Copyright {{ copyright }}
-      2024
+      &nbsp;<b style="font-family: Arial, serif">©</b> Copyright Harshal 2024
     </p>
   </div>
 </html>

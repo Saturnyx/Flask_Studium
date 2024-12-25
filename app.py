@@ -84,7 +84,8 @@ def search_files(query, directory="library"):
             file_path = os.path.join(root, file)
             with open(file_path, "r") as f:
                 if query in f.read():
-                    result_files.append(file_path)
+                    if "!" not in file_path:
+                        result_files.append(file_path)
     return result_files
 
 
@@ -101,7 +102,9 @@ def search():
     if request.method == "POST":
         search_query = request.form.get("search_query", "").strip()
         if not search_query:
-            return render_template("search.html", content="No search query provided.")
+            return render_template(
+                "search.html", content='<p class="mono">No search query provided.</p>'
+            )
         raw_results = search_files(search_query)
         for i in range(len(raw_results)):
             raw_results[i] = (
@@ -113,9 +116,9 @@ def search():
         final_result = Markup(
             "<p class='search_result'>" + "<br>".join(raw_results) + "</p>"
         )
-        return render_template("search.html", copyright=author, content=final_result)
+        return render_template("search.html", content=final_result)
     else:
-        return render_template("search.html", copyright=author, content="")
+        return render_template("search.html", content="")
 
 
 @app.route("/guide")
