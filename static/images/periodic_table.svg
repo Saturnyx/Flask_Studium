@@ -534,7 +534,6 @@
     <text font-family="Crimson Pro-Bold" font-size="8.5" transform="translate(103 325)">
         89 - 102
     </text>
-    <path d="M118 259h2v-3h2v3h2v1l-2 1 2 3-2 1-1-2-1 2-2-1 2-3-2-1v-1zm6 45 2 1v-3h2v3l2-1v2l-2 1 2 2-2 2-1-3-1 3-2-2 2-2-2-1v-2zm-10 0 2 1v-3h2v3l2-1 1 2-2 1 1 2-1 2-2-3-1 3-1-2 1-2-2-1v-2z"/>
     <path fill="#FAFFFFFF" stroke="#001A1AFF" stroke-miterlimit="10" stroke-width=".9" d="M535 66h37v43h-37z"/>
     <text font-family="Crimson Pro" font-size="7.1" transform="translate(546 108)">
         10.81
