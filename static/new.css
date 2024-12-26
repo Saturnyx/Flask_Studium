@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+  background: hsl(180, 100%, 5%);
+  cursor: url("/static/images/Cursor.svg"), auto;
 }
 
 body {
@@ -107,6 +109,7 @@ button {
   margin: 5px 5px 5px 5px;
   transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
+  cursor: url("/static/images/Cursor-large.svg"), auto;
 }
 
 button:hover {
@@ -121,6 +124,7 @@ a {
   text-decoration: none;
   font-weight: normal;
   transition: font-weight 0.3s ease-in-out;
+  cursor: url("/static/images/Cursor-large.svg"), auto;
 }
 
 a:hover {
@@ -286,6 +290,7 @@ u {
   left: 0;
   padding: calc(3vw);
   position: fixed;
+  cursor: url("/static/images/Cursor-large.svg"), auto;
 }
 
 .toc {
@@ -372,6 +377,7 @@ u {
   --transparent: hsla(0, 0%, 100%, 0.3);
   --accent: hsl(180, 100%, 15%);
   --accent-transparent: hsla(180, 100%, 15%, 0.7);
+  --cursor-color: hsla(180, 100%, 20%, 0.7);
   --light-red: hsl(0, 100%, 80%);
   --dark-red: hsl(0, 100%, 15%);
   --light-blue: hsl(200, 100%, 80%);
