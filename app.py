@@ -210,7 +210,7 @@ def physics():
     return render(title, author, path)
 
 
-# CONTRIBUTING --------------------------------------------------------------------------------------------------------+
+# CONTRIBUTING.md --------------------------------------------------------------------------------------------------------+
 @app.route("/contribute")
 def contribute():
     title = "Contribute"

@@ -7,4 +7,5 @@ to you soon.
 ### Personal Help
 
 If your message contains personal data or if you do not wish to share your message with the public,
-email us directly at <a href="mailto:studium@hackclub.app">studium@hackclub.app</a>
+email us directly at <a href="mailto: studium@hackclub.app">studium@hackclub.app</a>.
+However, please note that this will take longer periods of time to notice and the response might be slower.

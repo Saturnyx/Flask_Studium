@@ -1,16 +1,86 @@
-# Studium
+# Welcome to STUDIUM
 
-Hi! I'm Harshal, the main (and only) developer of Studium. Studium is a website that I created for students to share
-notes. Studium is developed to be accessible to people of all walks of life, it requires little internet and is
-completely free. Studium is also completely private, and does not log any of the users' data.
+### Description
 
-### About the site
+Studium is an open source website that aims to help students study and learn.
 
-This site is almost 100% HTML. This allows the website to be really fast as it requires little downloading of data. This
-also aids people with unstable or slow internet connections to still reach this website. I am also looking for other
-ways to improve the accessibility of the site (e.g., translating webpages).
+### Usage
 
-### About the content
+Studium is a website built on the Flask Framework.
+Hence, to use it locally, you will need [Python](https://www.python.org/downloads/release/python-3131/) installed (
+version 3.13.1 recommended).
+You can clone this repository using:
 
-The information on this site does not follow a certain syllabus or so. Hence, students that study different syllabuses
-can still use this site. The site also allows people to add their own content. This allows teh site to grow easily.
+```bash
+  git clone https://github.com/Harshal-ACSI/Flask_Studium.git
+```
+
+**or**
+
+<sub>This only works with [Github CLI](https://cli.github.com/)</sub>
+
+```bash
+  gh repo clone Harshal-ACSI/Flask_Studium
+```
+
+It is recommended that you use a virtual environment for this project.
+
+```bash
+  pip install virtualenv
+  
+  # In PowerShell (Windows)
+  venv\Scripts\Activate.ps1
+  # In cmd.exe (Windows)
+  venv\Scripts\activate.bat
+  # In Linux/Macos
+  source myvenv/bin/activate
+```
+
+You will also need to install the dependencies listed in [requirements.txt](requirements.txt).
+Run the following command on the terminal to automatically install dependencies:
+
+```bash
+  pip install -r requirements.txt
+```
+
+Now you should be able to run the website locally.
+You can visit the website using port [4777](http://127.0.0.1:47777/).
+
+### License
+
+This project has been licensed using a GPL v2 License.
+Here are the requirements and recommendations, along with what you are allowed to do with this code.
+
+**Requirements:**
+
+1. The source code of the modified code should be open source.
+2. The repository should still be licensed under the GPL v2 license.
+3. You cannot impose any additional restrictions beyond those outlined in the GPL v2 license.
+4. If you modify the software, you must include a prominent notice stating the changes you made and the date of those
+   changes.
+
+**You are allowed to:**
+
+- Use the code commercially
+- Modify the code
+- Distribute copies of the modified code (As long as it still retains the GPL v2 license)
+
+For more information, refer to the [LICENSE](LICENSE) file
+
+### Support
+
+**Help**
+
+If you need help, feel free to open a new discussion
+in [Discussions](https://github.com/Harshal-ACSI/Flask_Studium/discussions/categories/help).The developers will reply
+to you soon.
+
+**Personal Help**
+
+If your message contains personal data or if you do not wish to share your message with the public,
+email us directly at <a href="mailto: studium@hackclub.app">studium@hackclub.app</a>.
+However, please note that this will take longer periods of time to notice and the response might be slower.
+
+### Contributing
+
+Visit the [CONTRIBUTING](CONTRIBUTING.md) file
