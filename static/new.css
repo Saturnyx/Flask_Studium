@@ -182,6 +182,18 @@ u {
   padding-left: 0;
 }
 
+.quote {
+  margin-top: 2vh;
+  line-height: 30px;
+  text-align: center;
+  font-family: "Crimson Pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: var(--dark);
+  cursor: url("/static/images/Cursor-large.svg"), auto;
+}
+
 .search_result {
   font-family: "Space Mono", monospace;
   font-weight: 400;

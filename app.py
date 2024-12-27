@@ -4,7 +4,7 @@ import os
 from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
 
-version = "12024.9.2"
+version = "12024.9.3"
 port_number = 47777
 
 app = Flask(__name__)
@@ -150,6 +150,14 @@ def about_us():
     title = "About Us"
     author = "Harshal"
     path = "about_us.html"
+    return render(title, author, path)
+
+
+@app.route("/quotes")
+def a_quote_a_day():
+    title = "A Quote A Day"
+    author = "Harshal"
+    path = "aquoteaday.html"
     return render(title, author, path)
 
 
