@@ -5,9 +5,9 @@ import secrets
 from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
 
-version = "12024.9.3"
-port_number = 47777
-UPLOAD_FOLDER = "uploads"
+version = "12024.9.3"  # Current Version Number
+port_number = 47777  # Port Number to use during testing
+UPLOAD_FOLDER = "uploads"  # The folder where notes are submitted
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
@@ -59,11 +59,14 @@ def render(title, author, path):
     :rtype: str
     """
     try:
-        content = Markup(open(f"library/{path}").read())
+        with open(f"library/{path}", "r") as f:
+            content = Markup(f.read())
     except FileNotFoundError:
-        content = Markup(open(f"library/errors/empty.html").read())
+        with open("library/errors/404.html", "r") as f:
+            content = Markup(f.read())
     if content == "":
-        content = Markup(open("library/errors/empty.html").read())
+        with open("library/errors/empty.html") as f:
+            content = Markup(f.read())
     return render_template("page.html", title=title, copyright=author, content=content)
 
 
@@ -100,7 +103,6 @@ def home():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    author = "Harshal"
     if request.method == "POST":
         search_query = request.form.get("search_query", "").strip()
         if not search_query:
@@ -316,8 +318,8 @@ def server_error(e):
         + request.remote_addr
         + "\n"
     )
-    with open("logs/main.log", "a") as log:
-        log.write(error)
+    with open("logs/main.log", "a") as log_file:
+        log_file.write(error)
     print(error)
     title = "Server Error"
     author = "Harshal"
@@ -376,4 +378,3 @@ if __name__ == "__main__":
     with open("logs/main.log", "a") as log:
         log.write(close_checkpoint)
         print(close_checkpoint)
-        log.close()
