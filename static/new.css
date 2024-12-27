@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
   background: hsl(180, 100%, 5%);
+  cursor: url("/static/images/Cursor-load.svg"), progress;
+}
+
+html.normal-cursor {
   cursor: url("/static/images/Cursor.svg"), auto;
 }
 
@@ -338,6 +342,7 @@ u {
   font-size: 15px;
   margin-bottom: 40px;
   background-color: var(--light-red);
+  cursor: url("/static/images/Cursor-red.svg"), auto;
   transition: box-shadow 0.3s ease-in-out, margin-left 0.3s ease-in-out,
     margin-right 0.3s ease-in-out, padding-left 0.3s ease-in-out,
     padding-right 0.3s ease-in-out;
