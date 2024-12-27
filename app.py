@@ -1,5 +1,6 @@
 import datetime
 import os
+import secrets
 
 from flask import Flask, render_template, redirect, request
 from markupsafe import Markup
@@ -9,7 +10,7 @@ port_number = 47777
 UPLOAD_FOLDER = "uploads"
 
 app = Flask(__name__)
-
+app.secret_key = secrets.token_hex(16)
 
 def clear_logs():
     """
@@ -219,7 +220,7 @@ def physics():
     return render(title, author, path)
 
 
-# CONTRIBUTING.md --------------------------------------------------------------------------------------------------------+
+# CONTRIBUTING --------------------------------------------------------------------------------------------------------+
 @app.route("/contribute")
 def contribute():
     title = "Contribute"
@@ -242,18 +243,17 @@ def handle_submission():
     name = request.form.get("name", "").strip()
     email = request.form.get("email", "").strip()
     title = request.form.get("title", "").strip()
-    files = request.files.getlist("file")  # Handles multiple uploaded files
+    files = request.files.getlist("file")
 
     if not name:
         return "Error: Name is required.", 400
     if not files:
         return "Error: No files uploaded.", 400
 
-    # Create a directory for the user based on the name
     folder_path = os.path.join(UPLOAD_FOLDER, name)
-    os.makedirs(folder_path, exist_ok=True)  # Create directory if not exists
 
-    # Save user information into an info.txt file
+    os.makedirs(folder_path, exist_ok=True)
+
     info_file_path = os.path.join(folder_path, "info.txt")
     with open(info_file_path, "a") as info_file:
         info_file.write(
@@ -264,14 +264,31 @@ def handle_submission():
         info_file.write(f"Title: {title}\n")
         info_file.write("-" * 50 + "\n")
 
-    # Save each uploaded file into the user's folder
     for file in files:
-        if file.filename:  # Ensure the file has a name
+        if file.filename:
             save_path = os.path.join(folder_path, file.filename)
             file.save(save_path)
+    print(folder_path)
+    if os.path.exists(folder_path):
+        return redirect("/contribute/success")
+    else:
+        return redirect("/contribute/failure")
 
-    return redirect("/")  # Redirect back to the form
 
+@app.route("/contribute/success")
+def contribute_success():
+    title = "Success"
+    author = "Harshal"
+    path = "contributions/success.html"
+    return render(title, author, path)
+
+
+@app.route("/contribute/failure")
+def contribute_failure():
+    title = "Failure"
+    author = "Harshal"
+    path = "contributions/failure.html"
+    return render(title, author, path)
 
 # ERRORS --------------------------------------------------------------------------------------------------------------+
 @app.errorhandler(404)
@@ -330,6 +347,7 @@ def xperiment_page():
     title = "Xperiment"
     author = "Harshal"
     path = "xperiment/xperiment.html"
+    return render(title, author, path)
 
 
 @app.route("/xperiment/lab=<lab>")
