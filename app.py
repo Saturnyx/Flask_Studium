@@ -6,6 +6,7 @@ from markupsafe import Markup
 
 version = "12024.9.3"
 port_number = 47777
+UPLOAD_FOLDER = "uploads"
 
 app = Flask(__name__)
 
@@ -227,12 +228,49 @@ def contribute():
     return render(title, author, path)
 
 
-@app.route("/contribute/notes")
+@app.route("/contribute/notes", methods=["GET", "POST"])
 def contribute_notes():
     title = "Submit Notes"
     author = "Harshal"
     path = "contributions/notes.html"
     return render(title, author, path)
+
+
+@app.route("/submit", methods=["GET", "POST"])
+def handle_submission():
+    # Get form data
+    name = request.form.get("name", "").strip()
+    email = request.form.get("email", "").strip()
+    title = request.form.get("title", "").strip()
+    files = request.files.getlist("file")  # Handles multiple uploaded files
+
+    if not name:
+        return "Error: Name is required.", 400
+    if not files:
+        return "Error: No files uploaded.", 400
+
+    # Create a directory for the user based on the name
+    folder_path = os.path.join(UPLOAD_FOLDER, name)
+    os.makedirs(folder_path, exist_ok=True)  # Create directory if not exists
+
+    # Save user information into an info.txt file
+    info_file_path = os.path.join(folder_path, "info.txt")
+    with open(info_file_path, "a") as info_file:
+        info_file.write(
+            f"Submission time: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        )
+        info_file.write(f"Name: {name}\n")
+        info_file.write(f"Email: {email}\n")
+        info_file.write(f"Title: {title}\n")
+        info_file.write("-" * 50 + "\n")
+
+    # Save each uploaded file into the user's folder
+    for file in files:
+        if file.filename:  # Ensure the file has a name
+            save_path = os.path.join(folder_path, file.filename)
+            file.save(save_path)
+
+    return redirect("/")  # Redirect back to the form
 
 
 # ERRORS --------------------------------------------------------------------------------------------------------------+
@@ -287,8 +325,23 @@ def hackers(date):
         return render(title, author, path)
 
 
+@app.route("/xperiment")
+def xperiment_page():
+    title = "Xperiment"
+    author = "Harshal"
+    path = "xperiment/xperiment.html"
+
+
+@app.route("/xperiment/lab=<lab>")
+def xperiment(lab):
+    title = lab
+    author = "Harshal"
+    path = f"xperiment/{lab}.html"
+    return render(title, author, path)
+
 if __name__ == "__main__":
     clear_logs()
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
     init_checkpoint = (
         "@ " + str(datetime.datetime.now()) + " check: server initialized\n"
     )

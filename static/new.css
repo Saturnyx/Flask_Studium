@@ -150,6 +150,52 @@ u {
   font-weight: normal;
 }
 
+label {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--dark);
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--dark);
+  padding: 5px 5px 5px 20px;
+  margin: 5px 0;
+  width: 100%;
+  color: var(--dark);
+  background-color: var(--light);
+  box-shadow: 0 0 0 var(--dark);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 10px 10px 0 var(--dark);
+}
+
+input::placeholder {
+  font-family: "Space Mono", monospace;
+  font-style: italic;
+  color: var(--dark);
+  opacity: 0.7;
+}
+
+input::file-selector-button {
+  display: none;
+}
+
+input[type="file"] {
+  cursor: url("/static/images/Cursor-large.svg"), auto;
+}
+
 .content {
   left: 0;
   right: 0;

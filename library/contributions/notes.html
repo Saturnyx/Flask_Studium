@@ -1,0 +1,59 @@
+<div class="alert">
+  <div style="display: flex; align-items: center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="20px"
+      viewBox="0 -960 960 960"
+      width="20px"
+      fill="#4D0000FF"
+    >
+      <path
+        d="M479.82-264q21.18 0 35.68-14.32 14.5-14.33 14.5-35.5 0-21.18-14.32-35.68-14.33-14.5-35.5-14.5-21.18 0-35.68 14.32-14.5 14.33-14.5 35.5 0 21.18 14.32 35.68 14.33 14.5 35.5 14.5ZM428-442h106v-246H428v246Zm52 394q-89.64 0-168.48-34.02-78.84-34.02-137.16-92.34-58.32-58.32-92.34-137.16T48-480q0-89.9 34.08-168.96 34.08-79.07 92.5-137.55Q233-845 311.74-878.5 390.48-912 480-912q89.89 0 168.94 33.5Q728-845 786.5-786.5t92 137.58q33.5 79.09 33.5 169 0 89.92-33.5 168.42Q845-233 786.51-174.58q-58.48 58.42-137.55 92.5Q569.9-48 480-48Zm0-106q136.51 0 231.26-94.74Q806-343.49 806-480t-94.74-231.26Q616.51-806 480-806t-231.26 94.74Q154-616.51 154-480t94.74 231.26Q343.49-154 480-154Zm0-326Z"
+      ></path>
+    </svg>
+    <b class="red-selection">&nbsp;Plz Wait! </b><br class="red-selection" />
+  </div>
+  The Website will only accept responses after 1st of January 2025.
+</div>
+
+<p>Thank you for contributing. Please send your notes here:</p>
+
+<form action="/submit" method="post" enctype="multipart/form-data">
+  <label for="name">Full Name:</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    oninvalid="this.setCustomValidity('Please, we need your name for copyright')"
+    oninput="setCustomValidity('')"
+    maxlength="100"
+    required
+  /><br /><br />
+
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    oninvalid="this.setCustomValidity('Please enter valid email')"
+    oninput="setCustomValidity('')"
+    maxlength="200"
+    required
+  /><br /><br />
+
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title" required /><br /><br />
+
+  <label for="file">Upload your note:</label>
+  <input
+    type="file"
+    id="file"
+    name="file"
+    oninvalid="this.setCustomValidity('Please upload a file')"
+    oninput="setCustomValidity('')"
+    multiple
+    required
+  /><br /><br />
+
+  <button type="submit">Submit</button>
+</form>
