@@ -27,19 +27,18 @@ h1 {
   right: 0;
   margin: 0;
   padding-top: 30vh;
-  font-size: calc(50px + 10vw);
+  font-size: calc(50px + 9vw);
   font-family: "Unica One", sans-serif;
   font-weight: 600;
   font-optical-sizing: auto;
   font-style: normal;
   color: var(--light);
-  text-shadow: 0 0 var(--transparent);
-  transition: text-shadow 0.3s ease-in-out,
-    -webkit-text-fill-color 0.3s ease-in-out;
+  text-shadow: 0 0 0 var(--transparent);
+  transition: text-shadow 0.3s ease-in-out;
 }
 
 h1:hover {
-  text-shadow: 7px 7px var(--transparent);
+  text-shadow: 7px 7px 0 var(--transparent);
 }
 
 h2 {
@@ -279,7 +278,7 @@ button:hover {
   opacity: 0.5;
 }
 
-/* Search-realted Classes */
+/* Search-related Classes */
 .search {
   font-family: "Space Mono", monospace;
   font-weight: 400;

@@ -22,7 +22,7 @@
     />
   </head>
   <body>
-    <div class="background">
+    <div class="background" id="bg">
       <div class="logo" style="position: absolute">
         <svg
           width="40"
@@ -68,7 +68,7 @@
         </svg>
       </div>
       <p class="version-class">V{{ version }}</p>
-      <h1>STudIum</h1>
+      <h1 id="title">STudIum</h1>
     </div>
     <div class="horizontal-space"></div>
     <div class="content">
@@ -201,7 +201,13 @@
         style="display: flex; justify-content: center; margin: 20px"
         onclick="window.location.href='about_studium#hackclub'"
       >
-        <div style="margin-right: 20px; margin-top: 20px">
+        <div
+          style="
+            margin-right: 20px;
+            margin-top: 20px;
+            cursor: url('/static/images/Cursor-large.svg'), auto;
+          "
+        >
           <?xml version="1.0" encoding="UTF-8" standalone="no"?>
           <svg
             height="40"
@@ -245,6 +251,7 @@
         }} 2024
       </p>
     </div>
+
     <script src="/static/js/loading-cursor.js"></script>
   </body>
 </html>
