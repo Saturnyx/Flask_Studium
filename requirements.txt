@@ -1,3 +1,4 @@
 DateTime==5.5
 Flask==3.1.0
 MarkupSafe==3.0.2
+Flask-Compress==1.17

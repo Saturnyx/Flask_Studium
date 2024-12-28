@@ -3,6 +3,7 @@ import os
 import secrets
 
 from flask import Flask, render_template, redirect, request
+from flask_compress import Compress
 from markupsafe import Markup
 
 from lib import clear_logs, render, search_files
@@ -13,6 +14,7 @@ UPLOAD_FOLDER = "uploads"  # The folder where notes are submitted
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
+Compress(app)
 
 # MAIN PAGES ----------------------------------------------------------------------------------------------------------+
 @app.route("/")
