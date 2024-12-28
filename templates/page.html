@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <title>{{ title }}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to Studium – Your Ultimate Free Notes Sharing Platform! Crafted
+        with the collaboration of fellow learners"
+    />
+
+    <!-- External Files -->
     <link rel="stylesheet" href="{{ url_for('static', filename='new.css') }}" />
     <link rel="icon" href="{{ url_for('static',
     filename="images/logo-light.svg") }}" type="image/x-icon"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unica+One&display=swap"
       rel="stylesheet"
     />
-    <meta
-      name="description"
-      content="Welcome to Studium – Your Ultimate Free Notes Sharing Platform! Crafted
-        with the collaboration of fellow learners"
-    />
   </head>
   <body>
     <div class="content">
+      <!-- Title -->
       <h2 id="top">{{ title }}</h2>
 
+      <!-- Content -->
       <div class="horizontal-space-10"></div>
       {{ content|safe }}
       <div class="horizontal-space-10"></div>
     </div>
+
+    <!-- Footer -->
     <div class="footer">
       <div class="row" style="padding-left: 10px; padding-right: 10px">
+        <!-- Row 1 -->
         <div class="column">
           <b>Getting Started:</b><br />
           <button onclick="window.location.href='/'">Home</button>
@@ -44,6 +52,8 @@
             About Studium
           </button>
         </div>
+
+        <!-- Row 2 -->
         <div class="column">
           <b>Topics:</b><br />
           <button onclick="window.location.href='/chemistry/chemistry'">
@@ -61,6 +71,8 @@
           <button>Computer Science</button>
           <br />
         </div>
+
+        <!-- Row 3 -->
         <div class="column">
           <b>Helping Out:</b><br />
           <button onclick="window.location.href='/contribute'">
@@ -77,6 +89,8 @@
           <br />
         </div>
       </div>
+
+      <!-- Hackclub -->
       <div
         style="display: flex; justify-content: center; margin: 20px"
         onclick="window.location.href='/about_studium#hackclub'"
@@ -110,6 +124,7 @@
       </div>
     </div>
 
+    <!-- Copyright -->
     <div class="copyright">
       <p
         style="
@@ -126,6 +141,8 @@
         }} 2024
       </p>
     </div>
+
+    <!-- Logo -->
     <div class="logo" onclick="window.location.href='/'">
       <svg
         width="50"
@@ -170,6 +187,8 @@
         ></path>
       </svg>
     </div>
+
+    <!-- Scripts -->
     <script src="/static/js/loading-cursor.js"></script>
   </body>
 </html>
