@@ -28,7 +28,7 @@ h1 {
   margin: 0;
   padding-top: 30vh;
   font-size: calc(50px + 9vw);
-  font-family: "Unica One", sans-serif;
+  font-family: var(--title-font), sans-serif;
   font-weight: 600;
   font-optical-sizing: auto;
   font-style: normal;
@@ -48,7 +48,7 @@ h2 {
   margin: 0;
   padding-top: 20vh;
   font-size: calc(20px + 5vw);
-  font-family: "Unica One", sans-serif;
+  font-family: var(--title-font), sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
@@ -63,7 +63,7 @@ h3 {
   padding-top: 5vh;
   font-size: calc(20px + 1vw);
   color: var(--dark);
-  font-family: "Space Mono", serif;
+  font-family: var(--mono-font), serif;
   font-weight: bold;
   font-style: italic;
 }
@@ -73,7 +73,7 @@ h4 {
   padding-bottom: 0;
   color: var(--dark);
   margin-bottom: 0;
-  font-family: "Space Mono", serif;
+  font-family: var(--mono-font), serif;
   font-weight: bold;
   font-style: normal;
   text-decoration: underline 2px var(--dark);
@@ -92,7 +92,7 @@ p {
   margin-top: 10px;
   line-height: 30px;
   text-align: justify;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--text-font), serif;
   font-weight: 400;
   font-style: normal;
   font-size: 21px;
@@ -119,7 +119,7 @@ a:hover {
 }
 
 sup {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -128,7 +128,7 @@ sup {
 
 /* Labels & Inputs */
 label {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -139,7 +139,7 @@ label {
 }
 
 input {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -161,7 +161,7 @@ input:focus {
 }
 
 input::placeholder {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-style: italic;
   color: var(--dark);
   opacity: 0.7;
@@ -177,7 +177,7 @@ input[type="file"] {
 
 /* Non-Text-Based Elements */
 button {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: calc(0.7vw + 7px);
@@ -212,7 +212,7 @@ button:hover {
 
 /* Text-Based Classes */
 .mono {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -221,7 +221,7 @@ button:hover {
 }
 
 .toc {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 900;
   font-style: italic;
   font-size: 20px;
@@ -238,7 +238,7 @@ button:hover {
 
 .credits-title {
   color: var(--dark);
-  font-family: "Crimson Pro", serif;
+  font-family: " Pro", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
@@ -246,7 +246,7 @@ button:hover {
 
 .credits {
   color: var(--dark);
-  font-family: "Crimson Pro", serif;
+  font-family: var(--text-font), serif;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -256,7 +256,7 @@ button:hover {
   margin-top: 2vh;
   line-height: 30px;
   text-align: center;
-  font-family: "Crimson Pro", serif;
+  font-family: var(--text-font), serif;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -271,7 +271,7 @@ button:hover {
   padding-left: 10px;
   font-size: 100%;
   top: calc(100vh - 30px);
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   color: var(--light);
@@ -280,7 +280,7 @@ button:hover {
 
 /* Search-related Classes */
 .search {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -296,7 +296,7 @@ button:hover {
 }
 
 .search_result {
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -320,7 +320,7 @@ button:hover {
   color: var(--dark);
   padding: 10px;
   box-shadow: 10px 10px var(--dark);
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -342,7 +342,7 @@ button:hover {
   padding: 10px;
   box-shadow: 10px 10px var(--dark-red);
   color: var(--dark-red);
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -413,7 +413,7 @@ button:hover {
   height: auto;
   background-color: var(--dark);
   color: var(--light);
-  font-family: "Space Mono", monospace;
+  font-family: var(--mono-font), monospace;
   font-weight: 400;
   font-style: normal;
   font-size: calc(5px + 1vw);
@@ -446,6 +446,7 @@ button:hover {
   height: 20%;
 }
 
+/* Variables */
 :root {
   --light: hsl(180, 100%, 99%);
   --dark: hsl(180, 100%, 5%);
@@ -457,4 +458,8 @@ button:hover {
   --dark-red: hsl(0, 100%, 15%);
   --light-blue: hsl(200, 100%, 80%);
   --dark-blue: hsl(200, 100%, 15%);
+
+  --title-font: "Unica One";
+  --text-font: "Crimson Pro";
+  --mono-font: "Space Mono";
 }

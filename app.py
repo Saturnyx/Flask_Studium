@@ -2,8 +2,9 @@ import datetime
 import os
 import secrets
 
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, Blueprint
 from flask_compress import Compress
+from jinja2 import TemplateNotFound
 from markupsafe import Markup
 
 from lib import clear_logs, render, search_files
@@ -14,7 +15,10 @@ UPLOAD_FOLDER = "uploads"  # The folder where notes are submitted
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
+xperiments = Blueprint("admin", __name__, template_folder="xperiments")
+app.register_blueprint(xperiments, url_prefix="/xperiment")
 Compress(app)
+
 
 # MAIN PAGES ----------------------------------------------------------------------------------------------------------+
 @app.route("/")
@@ -214,6 +218,7 @@ def contribute_failure():
     path = "contributions/failure.html"
     return render(title, author, path)
 
+
 # ERRORS --------------------------------------------------------------------------------------------------------------+
 @app.errorhandler(404)
 def page_not_found(e):
@@ -228,6 +233,15 @@ def bad_request(e):
     title = "Bad Request"
     author = "Harshal"
     path = "errors/400.html"
+    error = (
+        "@ "
+        + str(datetime.datetime.now())
+        + " error: 400 by "
+        + request.remote_addr
+        + "\n"
+    )
+    with open("logs/error.log", "a") as error_file:
+        error_file.write(error)
     return render(title, author, path)
 
 
@@ -242,6 +256,8 @@ def server_error(e):
     )
     with open("logs/main.log", "a") as log_file:
         log_file.write(error)
+    with open("logs/error.log", "a") as error_file:
+        error_file.write(error)
     print(error)
     title = "Server Error"
     author = "Harshal"
@@ -270,16 +286,16 @@ def hackers(date):
 def xperiment_page():
     title = "Xperiment"
     author = "Harshal"
-    path = "xperiment/xperiment.html"
+    path = "templates/xperiment/xperiment.html"
     return render(title, author, path)
 
 
-@app.route("/xperiment/lab=<lab>")
+@app.route("/xperiment/<lab>")
 def xperiment(lab):
-    title = lab
-    author = "Harshal"
-    path = f"xperiment/{lab}.html"
-    return render(title, author, path)
+    try:
+        return render_template(f"xperiment/{lab}.html")
+    except TemplateNotFound:
+        return render_template("xperiment/xperiment.html")
 
 
 # RUNNING PROGRAM

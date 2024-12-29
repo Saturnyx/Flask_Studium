@@ -36,7 +36,7 @@ It is recommended that you use a virtual environment for this project.
   source myvenv/bin/activate
 ```
 
-You will also need to install the dependencies listed in [requirements.txt](requirements.txt).
+You will also need to install the dependencies listed in [requirements.txt](../requirements.txt).
 Run the following command on the terminal to automatically install dependencies:
 
 ```bash
