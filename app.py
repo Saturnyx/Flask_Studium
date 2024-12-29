@@ -91,6 +91,15 @@ def a_quote_a_day():
     return render(title, author, path)
 
 
+# BIOLOGY -------------------------------------------------------------------------------------------------------------+
+@app.route("/biology/biology")
+def biology():
+    title = "Biology"
+    author = "Harshal"
+    path = "biology/biology.html"
+    return render(title, author, path)
+
+
 # CHEMISTRY -----------------------------------------------------------------------------------------------------------+
 @app.route("/chemistry/chemistry")
 def chemistry():
@@ -136,6 +145,26 @@ def organic_chemistry():
     title = "Organic Chemistry"
     author = "Harshal"
     path = "chemistry/organic_chemistry/organic_chemistry.html"
+    return render(title, author, path)
+
+
+# COMPUTER SCIENCE ----------------------------------------------------------------------------------------------------+
+@app.route("/computer_science/computer_science")
+def computer_science():
+    title = "Computer Science"
+    author = "Harshal"
+    path = "computer_science/computer_science.html"
+    return render(title, author, path)
+
+
+# MATHEMATICS ---------------------------------------------------------------------------------------------------------+
+
+
+@app.route("/mathematics/mathematics")
+def mathematics():
+    title = "Mathematics"
+    author = "Harshal"
+    path = "mathematics/mathematics.html"
     return render(title, author, path)
 
 
@@ -263,6 +292,11 @@ def server_error(e):
     author = "Harshal"
     path = "errors/500.html"
     return render(title, author, path)
+
+
+@app.route("/sitemaps")
+def sitemaps():
+    return render_template("sitemap.xml")
 
 
 # SPECIAL PAGES -------------------------------------------------------------------------------------------------------+

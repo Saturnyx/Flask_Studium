@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Pages -->
+    <url>
+        <loc>https://studium.hackclub.app/</loc>
+        <lastmod>2023-10-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/search</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/guide</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/help</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/about_studium</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/about_us</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/quotes</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Biology Pages -->
+    <url>
+        <loc>https://studium.hackclub.app/biology/biology</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Chemistry Pages -->
+    <url>
+        <loc>https://studium.hackclub.app/chemistry/chemistry</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/chemistry/inorganic_chemistry/inorganic_chemistry</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/chemistry/inorganic_chemistry/atoms</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/chemistry/inorganic_chemistry/periodic_table</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/chemistry/organic_chemistry/organic_chemistry</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Computer Science Pages -->
+    <url>
+        <loc>https://studium.hackclub.app/computer_science/computer_science</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Mathematics Pages -->
+    <url>
+        <loc>https://studium.hackclub.app/mathematics/mathematics</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Physics Pages -->
+    <url>
+        <loc>https://studium.hackclub.app/physics/physics</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Contribute Pages -->
+    <url>
+        <loc>https://studium.hackclub.app/contribute</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/contribute/notes</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/contribute/success</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/contribute/failure</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Error Pages -->
+    <url>
+        <loc>https://studium.hackclub.app/errors/404</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/errors/400</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://studium.hackclub.app/errors/500</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
+</urlset>

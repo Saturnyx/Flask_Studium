@@ -1,0 +1,14 @@
+# Disallow web crawlers from accessing admin and private folders
+User-agent: *
+Disallow: /hackers/
+Disallow: /xperiment/
+Disallow: /submit/
+
+# Crawlers should avoid indexing these specific file types
+User-agent: *
+Disallow: /*.zip$
+Disallow: /*.exe$
+Disallow: /*.pdf$
+
+# Sitemaps (if applicable)
+Sitemap: https://studium.hackclub.app/sitemaps
