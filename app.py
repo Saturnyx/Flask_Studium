@@ -299,6 +299,11 @@ def sitemaps():
     return render_template("sitemap.xml")
 
 
+@app.route("/robots.txt")
+def robots():
+    return render_template("robots.txt")
+
+
 # SPECIAL PAGES -------------------------------------------------------------------------------------------------------+
 @app.route("/hackers/code=8059<date>")
 def hackers(date):
