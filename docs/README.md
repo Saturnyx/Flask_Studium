@@ -8,6 +8,7 @@
 > I would like to thank all of you for making this website possible.
 > And, before you go on reading the rest of my Readme, I'd like to wish you a Happy New Year (in advance)! 🎆🎉🎊
 
+> If you are from High Seas, visit [this page](https://studium.hackclub.app/) for a sample article.
 
 ### Description
 
