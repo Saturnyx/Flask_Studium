@@ -1,4 +1,4 @@
-# Welcome to STUDIUM
+# Welcome to STUDIUM (2025 Release)
 
 > #### B4 I go yapping abt my website,
 > Let me take a moment to thank y'all for giving me such a great opportunity to create,
