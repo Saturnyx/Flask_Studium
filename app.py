@@ -9,7 +9,7 @@ from markupsafe import Markup
 
 from lib import clear_logs, render, search_files
 
-version = "12024.9.3"  # Current Version Number
+version = "12025.0.0"  # Current Version Number
 port_number = 47777  # Port Number to use during testing
 UPLOAD_FOLDER = "uploads"  # The folder where notes are submitted
 
@@ -332,7 +332,12 @@ def xperiment_page():
 @app.route("/xperiment/<lab>")
 def xperiment(lab):
     try:
-        return render_template(f"xperiment/{lab}.html")
+        return render_template(
+            f"xperiment/{lab}.html",
+            path=f"xperiment/{lab}",
+            title=lab,
+            copyright="Author Write",
+        )
     except TemplateNotFound:
         return render_template("xperiment/xperiment.html")
 

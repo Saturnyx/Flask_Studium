@@ -59,7 +59,13 @@ def render(title, author, path):
     if content == "":
         with open("library/errors/empty.html") as f:
             content = Markup(f.read())
-    return render_template("page.html", title=title, copyright=author, content=content)
+    return render_template(
+        "page.html",
+        title=title,
+        copyright=author,
+        content=content,
+        path=path.replace(".html", ""),
+    )
 
 
 def search_files(query, directory="library"):

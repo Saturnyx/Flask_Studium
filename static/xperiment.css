@@ -1,0 +1,8 @@
+.bar-bg {
+  background-color: #000;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  position: fixed;
+}
