@@ -389,10 +389,10 @@ img {
   background-color: var(--accent-transparent);
 }
 
-. {
+.logo {
   top: 0;
   left: 0;
-  padding: calc(3vw);
+  padding: calc(2vw);
   position: fixed;
   cursor: url("/static/images/Cursor-large.svg"), auto;
 }
