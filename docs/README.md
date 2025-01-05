@@ -6,7 +6,6 @@
 > Whether you're a student from High Seas,
 > a Staff Member from Hackclub or a Nest user who decided to look at my repo,
 > I would like to thank all of you for making this website possible.
-> And, before you go on reading the rest of my Readme, I'd like to wish you a Happy New Year (in advance)! 🎆🎉🎊
 
 > If you are from High Seas, visit [this page](https://studium.hackclub.app/chemistry/inorganic_chemistry/atoms) for a sample article.
 
