@@ -32,5 +32,5 @@ const quoteElement = document.getElementById("daily-quote");
 if (quoteElement) {
   quoteElement.innerText = getDailyQuote();
 } else {
-  console.log(getDailyQuote()); // Fallback if element doesn't exist
+  console.log(getDailyQuote()); // Fallback if an element doesn't exist
 }
