@@ -1,6 +1,7 @@
 # Welcome to STUDIUM (2025 Release)
 
 > #### Before I go on and on about this project,
+>
 > Let me take a moment to thank y'all for giving me such a great opportunity to create,
 > host and share the website of my dreams.
 > Whether you're a student from High Seas,
@@ -16,10 +17,11 @@ It combines the simplicity of Flask with an intuitive interface to provide
 access to educational materials, tools, and resources that promote better learning experiences.
 
 ---
+
 ### Usage
 
 Studium is a website built on the [Flask Framework](https://github.com/Harshal-ACSI/Flask_Studium/tree/master/library).
-Hence, to use it locally, you will need [Python](https://www.python.org/downloads/release/python-3131/) installed 
+Hence, to use it locally, you will need [Python](https://www.python.org/downloads/release/python-3131/) installed
 (version 3.13.1 recommended).
 You can clone this repository using:
 
@@ -56,12 +58,15 @@ pip install -r requirements.txt
 ```
 
 Now you should be able to run the website locally using:
+
 ```bash
 flask run
 ```
+
 You can visit the website using port [4777](http://127.0.0.1:47777/).
 
 ---
+
 ### License
 
 This project has been licensed using a [GPL v2 License](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
@@ -93,6 +98,7 @@ Please also note that the content on the webpage is still copyright protected by
 So, please change the content in the [library](https://github.com/Harshal-ACSI//tree/master/library) directory.
 
 ---
+
 ### Support
 
 **Help**
@@ -108,9 +114,11 @@ email us directly at <a href="mailto: studium@hackclub.app">studium@hackclub.app
 However, please note that this will take longer periods of time to notice and the response might be slower.
 
 ---
+
 ### Contributing
 
 Please visit the [CONTRIBUTING](CONTRIBUTING.md) file.
 
 ### Code of Conduct
- Please visit the [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) file.
+
+Please visit the [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) file.
