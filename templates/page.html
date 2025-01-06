@@ -27,8 +27,8 @@
     <!-- Title Bar -->
     <div class="bar-bg">
       <div class="bar-left">
-        <b style="overflow: hidden; white-space: nowrap">{{ title }}</b>&nbsp;{{
-        path|safe }}
+        <b style="overflow: hidden; white-space: nowrap">{{ title|safe }}</b
+        >&nbsp;{{ path|safe }}
       </div>
       <div class="bar-right">
         <b
@@ -89,10 +89,12 @@
     </div>
     <div class="content">
       <!-- Title -->
-      <h2 id="top">{{ title }}</h2>
-
-      <!-- Content -->
+      <h2 id="top">{{ title|safe }}</h2>
       <div class="horizontal-space-10"></div>
+      <p class="mono" style="font-size: 14px">
+        Author: <b>{{ copyright|safe }}</b>
+      </p>
+      <!-- Content -->
       {{ content|safe }}
       <div class="horizontal-space-10"></div>
     </div>

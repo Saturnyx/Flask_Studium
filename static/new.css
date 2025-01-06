@@ -61,27 +61,26 @@ h3 {
   right: 0;
   margin: 0;
   padding-top: 5vh;
-  font-size: calc(20px + 1vw);
+  font-size: calc(10px + 2vw);
   color: var(--dark);
-  font-family: var(--mono-font), serif;
-  font-weight: bold;
+  font-family: var(--text-font), serif;
+  font-weight: normal;
   font-style: italic;
 }
 
 h4 {
-  font-size: calc(10px + 1vw);
+  font-size: calc(15px + 1vw);
   padding-bottom: 0;
   color: var(--dark);
   margin-bottom: 0;
-  font-family: var(--mono-font), serif;
-  font-weight: bold;
-  font-style: normal;
-  text-decoration: underline 2px var(--dark);
+  font-family: var(--text-font), serif;
+  font-weight: normal;
+  text-decoration: underline 1px var(--dark);
   text-underline-offset: 2px;
 }
 
 h4:hover {
-  text-decoration: underline wavy 2px var(--dark);
+  text-decoration: underline wavy 1px var(--dark);
 }
 
 /* Other Text-Based Elements */
@@ -225,19 +224,19 @@ img {
 }
 
 .toc {
-  font-family: var(--mono-font), monospace;
-  font-weight: 900;
+  font-family: var(--text-font), monospace;
+  font-weight: normal;
   font-style: italic;
-  font-size: 20px;
+  font-size: 30px;
   color: var(--dark);
   padding-left: 0;
   padding-bottom: 0;
   padding-top: 0;
-  text-decoration: underline solid 2px var(--dark);
+  text-decoration: none;
 }
 
 .toc:hover {
-  text-decoration: underline solid 2px var(--dark);
+  text-decoration: none;
 }
 
 .credits-title {
