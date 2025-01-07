@@ -37,6 +37,10 @@ git clone https://github.com/Harshal-ACSI/Flask_Studium.git
 gh repo clone Harshal-ACSI/Flask_Studium
 ```
 
+**or**
+
+You can directly [download as zip file](https://github.com/Harshal-ACSI/Flask_Studium/archive/refs/heads/master.zip)
+
 It is recommended that you use a virtual environment for this project.
 
 ```bash
