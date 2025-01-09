@@ -1,4 +1,4 @@
-<img src="https://github.com/Harshal-ACSI/Flask_Studium/blob/b2f292d4ca744928ff56d878507cf27f145e6185/static/images/Website_Pix/Header%20Image.png" alt="just a picture">
+<img src="https://raw.githubusercontent.com/Harshal-ACSI/Flask_Studium/refs/heads/master/static/images/Website_Pix/Header%20Image.png" alt="">
 
 # Welcome to STUDIUM (2025 Release)
 
