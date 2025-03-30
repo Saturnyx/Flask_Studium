@@ -88,6 +88,6 @@ def search_files(query, directory="library"):
             with open(file_path, "r") as f:
                 if query in f.read():
                     if "!" not in file_path:
-                        if "xperiment" in file_path:
+                        if "xperiment" not in file_path:
                             result_files.append(file_path)
     return result_files
